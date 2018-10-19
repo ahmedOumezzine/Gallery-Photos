@@ -1,11 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
 namespace Gallery_Photos.Models
 {
+    public class DefaultContext : DbContext
+    {
+
+        public DefaultContext() : base("DefaultContext")
+        {
+        }
+
+        public DbSet<Picture> Pictures { get; set; }
+       
+
+ 
+    }
     public class Picture
     {
         [Key]

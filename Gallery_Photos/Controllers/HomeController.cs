@@ -18,7 +18,7 @@ namespace Gallery_Photos.Controllers
         [HttpGet]
         public FileResult GetImage(string id)
         {
-            byte[] fileContents = System.IO.File.ReadAllBytes(@"C:\Users\AhmedOumezzine\source\Repos\Gallery_Photos\Gallery_Photos\Content\style\images\art\tg5-7.jpeg");
+            byte[] fileContents = System.IO.File.ReadAllBytes(Server.MapPath("/Content/style/images/art/tg5-7.jpeg"));
             string contentType = "image/jpeg";
             //Force garbage collection.
             GC.Collect();

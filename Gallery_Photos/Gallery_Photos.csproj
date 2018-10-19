@@ -45,6 +45,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -152,10 +158,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Picture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\GalleryPhotos.mdf" />
+    <Content Include="App_Data\GalleryPhotos_log.ldf">
+      <DependentUpon>GalleryPhotos.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -1092,8 +1103,6 @@
     <Content Include="Content\style\js\plugins.js" />
     <Content Include="Content\style\js\popper.min.js" />
     <Content Include="Content\style\js\scripts.js" />
-    <Content Include="Content\style\media\swimming.jpeg" />
-    <Content Include="Content\style\media\swimming.mp4" />
     <Content Include="Content\style\revolution\assets\coloredbg.png" />
     <Content Include="Content\style\revolution\assets\gridtile.png" />
     <Content Include="Content\style\revolution\assets\gridtile_3x3.png" />
@@ -1195,6 +1204,7 @@
     <Content Include="Content\style\type\slimicons\Slimicons.eot" />
     <Content Include="Content\style\type\slimicons\Slimicons.ttf" />
     <Content Include="Content\style\type\slimicons\Slimicons.woff" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -1222,7 +1232,6 @@
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Views\Photos\" />
   </ItemGroup>
   <ItemGroup>

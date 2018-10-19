@@ -12,7 +12,7 @@ namespace Gallery_Photos
 
             routes.MapRoute(
               name: "GetImage",
-              url: "img/{id}.jpg",
+              url: "img/{id}",
               defaults: new { controller = "Home", action = "GetImage", id = UrlParameter.Optional });
 
             routes.MapRoute(
