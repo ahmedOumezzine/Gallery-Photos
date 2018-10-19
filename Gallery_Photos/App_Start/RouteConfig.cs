@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Routing;
 
 namespace Gallery_Photos
@@ -12,6 +8,12 @@ namespace Gallery_Photos
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            routes.RouteExistingFiles = true;
+
+            routes.MapRoute(
+              name: "GetImage",
+              url: "img/{id}.jpg",
+              defaults: new { controller = "Home", action = "GetImage", id = UrlParameter.Optional });
 
             routes.MapRoute(
                 name: "Default",

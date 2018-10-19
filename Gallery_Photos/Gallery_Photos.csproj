@@ -148,9 +148,11 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PhotosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Picture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -1081,9 +1083,6 @@
     <Content Include="Content\style\images\dummy.png" />
     <Content Include="Content\style\images\favicon.png" />
     <Content Include="Content\style\images\loading.gif" />
-    <Content Include="Content\style\images\logo%402x.png" />
-    <Content Include="Content\style\images\logo-light%402x.png" />
-    <Content Include="Content\style\images\logo-light.png" />
     <Content Include="Content\style\images\logo.png" />
     <Content Include="Content\style\images\video-play.png" />
     <Content Include="Content\style\images\vimeo-play.png" />
@@ -1224,7 +1223,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="Views\Photos\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
