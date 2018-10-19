@@ -1,0 +1,1282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{13CCC5E9-886D-4DD2-8FD5-CA0D7720C362}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Gallery_Photos</RootNamespace>
+    <AssemblyName>Gallery_Photos</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Diagnostics.DiagnosticSource">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.4.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.TelemetryCorrelation">
+      <HintPath>..\packages\Microsoft.AspNet.TelemetryCorrelation.1.0.0\lib\net45\Microsoft.AspNet.TelemetryCorrelation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.5.1\lib\net46\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.4.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.5.1\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.5.1\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.5.1\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.5.1\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.5.1\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\style\css\bootstrap.min.css" />
+    <Content Include="Content\style\css\font\font2.css" />
+    <Content Include="Content\style\css\font\font3.css" />
+    <Content Include="Content\style\css\font\font4.css" />
+    <Content Include="Content\style\css\font\font5.css" />
+    <Content Include="Content\style\css\font\font6.css" />
+    <Content Include="Content\style\css\plugins.css" />
+    <Content Include="Content\style\images\art\a1.jpeg" />
+    <Content Include="Content\style\images\art\a13.jpeg" />
+    <Content Include="Content\style\images\art\a14.jpeg" />
+    <Content Include="Content\style\images\art\a15.jpeg" />
+    <Content Include="Content\style\images\art\a2.jpeg" />
+    <Content Include="Content\style\images\art\a3.jpeg" />
+    <Content Include="Content\style\images\art\a4.jpeg" />
+    <Content Include="Content\style\images\art\a5.jpeg" />
+    <Content Include="Content\style\images\art\a6.jpeg" />
+    <Content Include="Content\style\images\art\a7.jpeg" />
+    <Content Include="Content\style\images\art\a8.jpeg" />
+    <Content Include="Content\style\images\art\a9.jpeg" />
+    <Content Include="Content\style\images\art\about.jpeg" />
+    <Content Include="Content\style\images\art\about12.jpeg" />
+    <Content Include="Content\style\images\art\about13.jpeg" />
+    <Content Include="Content\style\images\art\about14.jpeg" />
+    <Content Include="Content\style\images\art\about16.jpeg" />
+    <Content Include="Content\style\images\art\about2.jpeg" />
+    <Content Include="Content\style\images\art\about20.jpeg" />
+    <Content Include="Content\style\images\art\about21.jpeg" />
+    <Content Include="Content\style\images\art\about22.jpeg" />
+    <Content Include="Content\style\images\art\about23.jpeg" />
+    <Content Include="Content\style\images\art\about24.jpeg" />
+    <Content Include="Content\style\images\art\about3.jpeg" />
+    <Content Include="Content\style\images\art\about4.jpeg" />
+    <Content Include="Content\style\images\art\about5.jpeg" />
+    <Content Include="Content\style\images\art\about7.jpeg" />
+    <Content Include="Content\style\images\art\about8.jpeg" />
+    <Content Include="Content\style\images\art\about9.jpeg" />
+    <Content Include="Content\style\images\art\an1-full.jpeg" />
+    <Content Include="Content\style\images\art\an1.jpeg" />
+    <Content Include="Content\style\images\art\an2-full.jpeg" />
+    <Content Include="Content\style\images\art\an2.jpeg" />
+    <Content Include="Content\style\images\art\an3-full.jpeg" />
+    <Content Include="Content\style\images\art\an3.jpeg" />
+    <Content Include="Content\style\images\art\an4-full.jpeg" />
+    <Content Include="Content\style\images\art\an4.jpeg" />
+    <Content Include="Content\style\images\art\an5-full.jpeg" />
+    <Content Include="Content\style\images\art\an5.jpeg" />
+    <Content Include="Content\style\images\art\an6-full.jpeg" />
+    <Content Include="Content\style\images\art\an6.jpeg" />
+    <Content Include="Content\style\images\art\an7-full.jpeg" />
+    <Content Include="Content\style\images\art\an7.jpeg" />
+    <Content Include="Content\style\images\art\an8-full.jpeg" />
+    <Content Include="Content\style\images\art\an8.jpeg" />
+    <Content Include="Content\style\images\art\an9-full.jpeg" />
+    <Content Include="Content\style\images\art\an9.jpeg" />
+    <Content Include="Content\style\images\art\ar1-full.jpeg" />
+    <Content Include="Content\style\images\art\ar1.jpeg" />
+    <Content Include="Content\style\images\art\ar10-full.jpeg" />
+    <Content Include="Content\style\images\art\ar10.jpeg" />
+    <Content Include="Content\style\images\art\ar11-full.jpeg" />
+    <Content Include="Content\style\images\art\ar11.jpeg" />
+    <Content Include="Content\style\images\art\ar12-full.jpeg" />
+    <Content Include="Content\style\images\art\ar12.jpeg" />
+    <Content Include="Content\style\images\art\ar13-full.jpeg" />
+    <Content Include="Content\style\images\art\ar13.jpeg" />
+    <Content Include="Content\style\images\art\ar14.jpeg" />
+    <Content Include="Content\style\images\art\ar15-full.jpeg" />
+    <Content Include="Content\style\images\art\ar15.jpeg" />
+    <Content Include="Content\style\images\art\ar16-full.jpeg" />
+    <Content Include="Content\style\images\art\ar16.jpeg" />
+    <Content Include="Content\style\images\art\ar2-full.jpeg" />
+    <Content Include="Content\style\images\art\ar2.jpeg" />
+    <Content Include="Content\style\images\art\ar3-full.jpeg" />
+    <Content Include="Content\style\images\art\ar3.jpeg" />
+    <Content Include="Content\style\images\art\ar4-full.jpeg" />
+    <Content Include="Content\style\images\art\ar4.jpeg" />
+    <Content Include="Content\style\images\art\ar5-full.jpeg" />
+    <Content Include="Content\style\images\art\ar5.jpeg" />
+    <Content Include="Content\style\images\art\ar6-full.jpeg" />
+    <Content Include="Content\style\images\art\ar6.jpeg" />
+    <Content Include="Content\style\images\art\ar7-full.jpeg" />
+    <Content Include="Content\style\images\art\ar7.jpeg" />
+    <Content Include="Content\style\images\art\ar8-full.jpeg" />
+    <Content Include="Content\style\images\art\ar8.jpeg" />
+    <Content Include="Content\style\images\art\ar9.jpeg" />
+    <Content Include="Content\style\images\art\author.jpeg" />
+    <Content Include="Content\style\images\art\b1.jpeg" />
+    <Content Include="Content\style\images\art\b10.jpeg" />
+    <Content Include="Content\style\images\art\b11.jpeg" />
+    <Content Include="Content\style\images\art\b12.jpeg" />
+    <Content Include="Content\style\images\art\b13.jpeg" />
+    <Content Include="Content\style\images\art\b14.jpeg" />
+    <Content Include="Content\style\images\art\b15.jpeg" />
+    <Content Include="Content\style\images\art\b16.jpeg" />
+    <Content Include="Content\style\images\art\b17.jpeg" />
+    <Content Include="Content\style\images\art\b18.jpeg" />
+    <Content Include="Content\style\images\art\b19.jpeg" />
+    <Content Include="Content\style\images\art\b2.jpeg" />
+    <Content Include="Content\style\images\art\b20.jpeg" />
+    <Content Include="Content\style\images\art\b21.jpeg" />
+    <Content Include="Content\style\images\art\b22.jpeg" />
+    <Content Include="Content\style\images\art\b23.jpeg" />
+    <Content Include="Content\style\images\art\b24.jpeg" />
+    <Content Include="Content\style\images\art\b25.jpeg" />
+    <Content Include="Content\style\images\art\b26.jpeg" />
+    <Content Include="Content\style\images\art\b27.jpeg" />
+    <Content Include="Content\style\images\art\b28.jpeg" />
+    <Content Include="Content\style\images\art\b29.jpeg" />
+    <Content Include="Content\style\images\art\b3.jpeg" />
+    <Content Include="Content\style\images\art\b30.jpeg" />
+    <Content Include="Content\style\images\art\b31.jpeg" />
+    <Content Include="Content\style\images\art\b32.jpeg" />
+    <Content Include="Content\style\images\art\b33.jpeg" />
+    <Content Include="Content\style\images\art\b34.jpeg" />
+    <Content Include="Content\style\images\art\b35.jpeg" />
+    <Content Include="Content\style\images\art\b36.jpeg" />
+    <Content Include="Content\style\images\art\b37.jpeg" />
+    <Content Include="Content\style\images\art\b38.jpeg" />
+    <Content Include="Content\style\images\art\b39.jpeg" />
+    <Content Include="Content\style\images\art\b4.jpeg" />
+    <Content Include="Content\style\images\art\b40.jpeg" />
+    <Content Include="Content\style\images\art\b41.jpeg" />
+    <Content Include="Content\style\images\art\b42.jpeg" />
+    <Content Include="Content\style\images\art\b43.jpeg" />
+    <Content Include="Content\style\images\art\b44.jpeg" />
+    <Content Include="Content\style\images\art\b45.jpeg" />
+    <Content Include="Content\style\images\art\b46.jpeg" />
+    <Content Include="Content\style\images\art\b47.jpeg" />
+    <Content Include="Content\style\images\art\b48.jpeg" />
+    <Content Include="Content\style\images\art\b49.jpeg" />
+    <Content Include="Content\style\images\art\b5.jpeg" />
+    <Content Include="Content\style\images\art\b50.jpeg" />
+    <Content Include="Content\style\images\art\b51.jpeg" />
+    <Content Include="Content\style\images\art\b52.jpeg" />
+    <Content Include="Content\style\images\art\b53.jpeg" />
+    <Content Include="Content\style\images\art\b54.jpeg" />
+    <Content Include="Content\style\images\art\b55.jpeg" />
+    <Content Include="Content\style\images\art\b56.jpeg" />
+    <Content Include="Content\style\images\art\b57.jpeg" />
+    <Content Include="Content\style\images\art\b58.jpeg" />
+    <Content Include="Content\style\images\art\b59.jpeg" />
+    <Content Include="Content\style\images\art\b6.jpeg" />
+    <Content Include="Content\style\images\art\b60.jpeg" />
+    <Content Include="Content\style\images\art\b61.jpeg" />
+    <Content Include="Content\style\images\art\b62.jpeg" />
+    <Content Include="Content\style\images\art\b63.jpeg" />
+    <Content Include="Content\style\images\art\b64.jpeg" />
+    <Content Include="Content\style\images\art\b65.jpeg" />
+    <Content Include="Content\style\images\art\b66.jpeg" />
+    <Content Include="Content\style\images\art\b67.jpeg" />
+    <Content Include="Content\style\images\art\b68.jpeg" />
+    <Content Include="Content\style\images\art\b69.jpeg" />
+    <Content Include="Content\style\images\art\b7.jpeg" />
+    <Content Include="Content\style\images\art\b8.jpeg" />
+    <Content Include="Content\style\images\art\b9.jpeg" />
+    <Content Include="Content\style\images\art\ba1.jpeg" />
+    <Content Include="Content\style\images\art\ba10.jpeg" />
+    <Content Include="Content\style\images\art\ba11.jpeg" />
+    <Content Include="Content\style\images\art\ba12.jpeg" />
+    <Content Include="Content\style\images\art\ba13.jpeg" />
+    <Content Include="Content\style\images\art\ba14.jpeg" />
+    <Content Include="Content\style\images\art\ba15.jpeg" />
+    <Content Include="Content\style\images\art\ba16.jpeg" />
+    <Content Include="Content\style\images\art\ba17.jpeg" />
+    <Content Include="Content\style\images\art\ba18.jpeg" />
+    <Content Include="Content\style\images\art\ba19.jpeg" />
+    <Content Include="Content\style\images\art\ba2.jpeg" />
+    <Content Include="Content\style\images\art\ba20.jpeg" />
+    <Content Include="Content\style\images\art\ba3.jpeg" />
+    <Content Include="Content\style\images\art\ba4.jpeg" />
+    <Content Include="Content\style\images\art\ba5.jpeg" />
+    <Content Include="Content\style\images\art\ba6.jpeg" />
+    <Content Include="Content\style\images\art\ba7.jpeg" />
+    <Content Include="Content\style\images\art\ba8.jpeg" />
+    <Content Include="Content\style\images\art\ba9.jpeg" />
+    <Content Include="Content\style\images\art\bb1.jpeg" />
+    <Content Include="Content\style\images\art\bb2.jpeg" />
+    <Content Include="Content\style\images\art\bb3.jpeg" />
+    <Content Include="Content\style\images\art\bb4.jpeg" />
+    <Content Include="Content\style\images\art\bb5.jpeg" />
+    <Content Include="Content\style\images\art\bb6.jpeg" />
+    <Content Include="Content\style\images\art\bp1-full.jpeg" />
+    <Content Include="Content\style\images\art\bp1.jpeg" />
+    <Content Include="Content\style\images\art\bp2-full.jpeg" />
+    <Content Include="Content\style\images\art\bp2.jpeg" />
+    <Content Include="Content\style\images\art\br1.jpeg" />
+    <Content Include="Content\style\images\art\br10.jpeg" />
+    <Content Include="Content\style\images\art\br11.jpeg" />
+    <Content Include="Content\style\images\art\br12.jpeg" />
+    <Content Include="Content\style\images\art\br13.jpeg" />
+    <Content Include="Content\style\images\art\br14.jpeg" />
+    <Content Include="Content\style\images\art\br15.jpeg" />
+    <Content Include="Content\style\images\art\br16.jpeg" />
+    <Content Include="Content\style\images\art\br17.jpeg" />
+    <Content Include="Content\style\images\art\br2.jpeg" />
+    <Content Include="Content\style\images\art\br3.jpeg" />
+    <Content Include="Content\style\images\art\br4.jpeg" />
+    <Content Include="Content\style\images\art\br5.jpeg" />
+    <Content Include="Content\style\images\art\br6.jpeg" />
+    <Content Include="Content\style\images\art\br7.jpeg" />
+    <Content Include="Content\style\images\art\br8.jpeg" />
+    <Content Include="Content\style\images\art\br9.jpeg" />
+    <Content Include="Content\style\images\art\bs1.jpeg" />
+    <Content Include="Content\style\images\art\bs10.jpeg" />
+    <Content Include="Content\style\images\art\bs11.jpeg" />
+    <Content Include="Content\style\images\art\bs12.jpeg" />
+    <Content Include="Content\style\images\art\bs13.jpeg" />
+    <Content Include="Content\style\images\art\bs14.jpeg" />
+    <Content Include="Content\style\images\art\bs2.jpeg" />
+    <Content Include="Content\style\images\art\bs3.jpeg" />
+    <Content Include="Content\style\images\art\bs4.jpeg" />
+    <Content Include="Content\style\images\art\bs5.jpeg" />
+    <Content Include="Content\style\images\art\bs6.jpeg" />
+    <Content Include="Content\style\images\art\bs7.jpeg" />
+    <Content Include="Content\style\images\art\bs8.jpeg" />
+    <Content Include="Content\style\images\art\bs9.jpeg" />
+    <Content Include="Content\style\images\art\c1.png" />
+    <Content Include="Content\style\images\art\c10.png" />
+    <Content Include="Content\style\images\art\c2.png" />
+    <Content Include="Content\style\images\art\c3.png" />
+    <Content Include="Content\style\images\art\c4.png" />
+    <Content Include="Content\style\images\art\c5.png" />
+    <Content Include="Content\style\images\art\c6.png" />
+    <Content Include="Content\style\images\art\c7.png" />
+    <Content Include="Content\style\images\art\c8.png" />
+    <Content Include="Content\style\images\art\c9.png" />
+    <Content Include="Content\style\images\art\cb1-full.jpeg" />
+    <Content Include="Content\style\images\art\cb1.jpeg" />
+    <Content Include="Content\style\images\art\cb10.jpeg" />
+    <Content Include="Content\style\images\art\cb11-full.jpeg" />
+    <Content Include="Content\style\images\art\cb11.jpeg" />
+    <Content Include="Content\style\images\art\cb12-full.jpeg" />
+    <Content Include="Content\style\images\art\cb12.jpeg" />
+    <Content Include="Content\style\images\art\cb13.jpeg" />
+    <Content Include="Content\style\images\art\cb14-full.jpeg" />
+    <Content Include="Content\style\images\art\cb14.jpeg" />
+    <Content Include="Content\style\images\art\cb15-full.jpeg" />
+    <Content Include="Content\style\images\art\cb15.jpeg" />
+    <Content Include="Content\style\images\art\cb16-full.jpeg" />
+    <Content Include="Content\style\images\art\cb16.jpeg" />
+    <Content Include="Content\style\images\art\cb2-full.jpeg" />
+    <Content Include="Content\style\images\art\cb2.jpeg" />
+    <Content Include="Content\style\images\art\cb3-full.jpeg" />
+    <Content Include="Content\style\images\art\cb3.jpeg" />
+    <Content Include="Content\style\images\art\cb4-full.jpeg" />
+    <Content Include="Content\style\images\art\cb4.jpeg" />
+    <Content Include="Content\style\images\art\cb5-full.jpeg" />
+    <Content Include="Content\style\images\art\cb5.jpeg" />
+    <Content Include="Content\style\images\art\cb6-full.jpeg" />
+    <Content Include="Content\style\images\art\cb6.jpeg" />
+    <Content Include="Content\style\images\art\cb7-full.jpeg" />
+    <Content Include="Content\style\images\art\cb7.jpeg" />
+    <Content Include="Content\style\images\art\cb8-full.jpeg" />
+    <Content Include="Content\style\images\art\cb8.jpeg" />
+    <Content Include="Content\style\images\art\cb9-full.jpeg" />
+    <Content Include="Content\style\images\art\cb9.jpeg" />
+    <Content Include="Content\style\images\art\ce1.jpeg" />
+    <Content Include="Content\style\images\art\ce2.jpeg" />
+    <Content Include="Content\style\images\art\ce3.jpeg" />
+    <Content Include="Content\style\images\art\ce4.jpeg" />
+    <Content Include="Content\style\images\art\ce5.jpeg" />
+    <Content Include="Content\style\images\art\ce6.jpeg" />
+    <Content Include="Content\style\images\art\ce7.jpeg" />
+    <Content Include="Content\style\images\art\ce8.jpeg" />
+    <Content Include="Content\style\images\art\cf1.jpeg" />
+    <Content Include="Content\style\images\art\cf2.jpeg" />
+    <Content Include="Content\style\images\art\cf3.jpeg" />
+    <Content Include="Content\style\images\art\cf4.jpeg" />
+    <Content Include="Content\style\images\art\cf5.jpeg" />
+    <Content Include="Content\style\images\art\cf6.jpeg" />
+    <Content Include="Content\style\images\art\cf7.jpeg" />
+    <Content Include="Content\style\images\art\cm1-full.jpeg" />
+    <Content Include="Content\style\images\art\cm1.jpeg" />
+    <Content Include="Content\style\images\art\cm2-full.jpeg" />
+    <Content Include="Content\style\images\art\cm2.jpeg" />
+    <Content Include="Content\style\images\art\cm3-full.jpeg" />
+    <Content Include="Content\style\images\art\cm3.jpeg" />
+    <Content Include="Content\style\images\art\cm4-full.jpeg" />
+    <Content Include="Content\style\images\art\cm4.jpeg" />
+    <Content Include="Content\style\images\art\cm5-full.jpeg" />
+    <Content Include="Content\style\images\art\cm5.jpeg" />
+    <Content Include="Content\style\images\art\cm6-full.jpeg" />
+    <Content Include="Content\style\images\art\cm6.jpeg" />
+    <Content Include="Content\style\images\art\cm7-full.jpeg" />
+    <Content Include="Content\style\images\art\cm7.jpeg" />
+    <Content Include="Content\style\images\art\cm8-full.jpeg" />
+    <Content Include="Content\style\images\art\cm8.jpeg" />
+    <Content Include="Content\style\images\art\cn1-full.jpeg" />
+    <Content Include="Content\style\images\art\cn1.jpeg" />
+    <Content Include="Content\style\images\art\cn2-full.jpeg" />
+    <Content Include="Content\style\images\art\cn2.jpeg" />
+    <Content Include="Content\style\images\art\cn3-full.jpeg" />
+    <Content Include="Content\style\images\art\cn3.jpeg" />
+    <Content Include="Content\style\images\art\cn4-full.jpeg" />
+    <Content Include="Content\style\images\art\cn4.jpeg" />
+    <Content Include="Content\style\images\art\cn5-full.jpeg" />
+    <Content Include="Content\style\images\art\cn5.jpeg" />
+    <Content Include="Content\style\images\art\cn6-full.jpeg" />
+    <Content Include="Content\style\images\art\cn6.jpeg" />
+    <Content Include="Content\style\images\art\cn7-full.jpeg" />
+    <Content Include="Content\style\images\art\cn7.jpeg" />
+    <Content Include="Content\style\images\art\cn8-full.jpeg" />
+    <Content Include="Content\style\images\art\cn8.jpeg" />
+    <Content Include="Content\style\images\art\cocoen1.jpeg" />
+    <Content Include="Content\style\images\art\cocoen2.jpeg" />
+    <Content Include="Content\style\images\art\cp1.jpeg" />
+    <Content Include="Content\style\images\art\cp10.jpeg" />
+    <Content Include="Content\style\images\art\cp11.jpeg" />
+    <Content Include="Content\style\images\art\cp12.jpeg" />
+    <Content Include="Content\style\images\art\cp13.jpeg" />
+    <Content Include="Content\style\images\art\cp14.jpeg" />
+    <Content Include="Content\style\images\art\cp15.jpeg" />
+    <Content Include="Content\style\images\art\cp16.jpeg" />
+    <Content Include="Content\style\images\art\cp17.jpeg" />
+    <Content Include="Content\style\images\art\cp18.jpeg" />
+    <Content Include="Content\style\images\art\cp19.jpeg" />
+    <Content Include="Content\style\images\art\cp2.jpeg" />
+    <Content Include="Content\style\images\art\cp20.jpeg" />
+    <Content Include="Content\style\images\art\cp21.jpeg" />
+    <Content Include="Content\style\images\art\cp22.jpeg" />
+    <Content Include="Content\style\images\art\cp23.jpeg" />
+    <Content Include="Content\style\images\art\cp24.jpeg" />
+    <Content Include="Content\style\images\art\cp25.jpeg" />
+    <Content Include="Content\style\images\art\cp26.jpeg" />
+    <Content Include="Content\style\images\art\cp27.jpeg" />
+    <Content Include="Content\style\images\art\cp28.jpeg" />
+    <Content Include="Content\style\images\art\cp3.jpeg" />
+    <Content Include="Content\style\images\art\cp4.jpeg" />
+    <Content Include="Content\style\images\art\cp5.jpeg" />
+    <Content Include="Content\style\images\art\cp6.jpeg" />
+    <Content Include="Content\style\images\art\cp7.jpeg" />
+    <Content Include="Content\style\images\art\cp8.jpeg" />
+    <Content Include="Content\style\images\art\cp9.jpeg" />
+    <Content Include="Content\style\images\art\cr1-full.jpeg" />
+    <Content Include="Content\style\images\art\cr1.jpeg" />
+    <Content Include="Content\style\images\art\cr10-full.jpeg" />
+    <Content Include="Content\style\images\art\cr10.jpeg" />
+    <Content Include="Content\style\images\art\cr11-full.jpeg" />
+    <Content Include="Content\style\images\art\cr11.jpeg" />
+    <Content Include="Content\style\images\art\cr2-full.jpeg" />
+    <Content Include="Content\style\images\art\cr2.jpeg" />
+    <Content Include="Content\style\images\art\cr3-full.jpeg" />
+    <Content Include="Content\style\images\art\cr3.jpeg" />
+    <Content Include="Content\style\images\art\cr4-full.jpeg" />
+    <Content Include="Content\style\images\art\cr4.jpeg" />
+    <Content Include="Content\style\images\art\cr5-full.jpeg" />
+    <Content Include="Content\style\images\art\cr5.jpeg" />
+    <Content Include="Content\style\images\art\cr6-full.jpeg" />
+    <Content Include="Content\style\images\art\cr6.jpeg" />
+    <Content Include="Content\style\images\art\cr7-full.jpeg" />
+    <Content Include="Content\style\images\art\cr7.jpeg" />
+    <Content Include="Content\style\images\art\cr8-full.jpeg" />
+    <Content Include="Content\style\images\art\cr8.jpeg" />
+    <Content Include="Content\style\images\art\cr9-full.jpeg" />
+    <Content Include="Content\style\images\art\cr9.jpeg" />
+    <Content Include="Content\style\images\art\cu1-full.jpeg" />
+    <Content Include="Content\style\images\art\cu1.jpeg" />
+    <Content Include="Content\style\images\art\cu2-full.jpeg" />
+    <Content Include="Content\style\images\art\cu2.jpeg" />
+    <Content Include="Content\style\images\art\cu3-full.jpeg" />
+    <Content Include="Content\style\images\art\cu3.jpeg" />
+    <Content Include="Content\style\images\art\cu4-full.jpeg" />
+    <Content Include="Content\style\images\art\cu4.jpeg" />
+    <Content Include="Content\style\images\art\cu5-full.jpeg" />
+    <Content Include="Content\style\images\art\cu5.jpeg" />
+    <Content Include="Content\style\images\art\cu6-full.jpeg" />
+    <Content Include="Content\style\images\art\cu6.jpeg" />
+    <Content Include="Content\style\images\art\cu7-full.jpeg" />
+    <Content Include="Content\style\images\art\cu7.jpeg" />
+    <Content Include="Content\style\images\art\cu8-full.jpeg" />
+    <Content Include="Content\style\images\art\cu8.jpeg" />
+    <Content Include="Content\style\images\art\cw1.jpeg" />
+    <Content Include="Content\style\images\art\cw2.jpeg" />
+    <Content Include="Content\style\images\art\cw3.jpeg" />
+    <Content Include="Content\style\images\art\cw4.jpeg" />
+    <Content Include="Content\style\images\art\cw5.jpeg" />
+    <Content Include="Content\style\images\art\cw6.jpeg" />
+    <Content Include="Content\style\images\art\cw7.jpeg" />
+    <Content Include="Content\style\images\art\d1.jpeg" />
+    <Content Include="Content\style\images\art\d2.jpeg" />
+    <Content Include="Content\style\images\art\d3.jpeg" />
+    <Content Include="Content\style\images\art\d4.jpeg" />
+    <Content Include="Content\style\images\art\d5.jpeg" />
+    <Content Include="Content\style\images\art\d6.jpeg" />
+    <Content Include="Content\style\images\art\d7.jpeg" />
+    <Content Include="Content\style\images\art\d8.jpeg" />
+    <Content Include="Content\style\images\art\d9.jpeg" />
+    <Content Include="Content\style\images\art\ds1.jpeg" />
+    <Content Include="Content\style\images\art\ds2.jpeg" />
+    <Content Include="Content\style\images\art\ds3.jpeg" />
+    <Content Include="Content\style\images\art\ds4.jpeg" />
+    <Content Include="Content\style\images\art\ds5.jpeg" />
+    <Content Include="Content\style\images\art\ds6.jpeg" />
+    <Content Include="Content\style\images\art\ds7.jpeg" />
+    <Content Include="Content\style\images\art\ds8.jpeg" />
+    <Content Include="Content\style\images\art\f1.jpeg" />
+    <Content Include="Content\style\images\art\f10.jpeg" />
+    <Content Include="Content\style\images\art\f11.jpeg" />
+    <Content Include="Content\style\images\art\f12.jpeg" />
+    <Content Include="Content\style\images\art\f13.jpeg" />
+    <Content Include="Content\style\images\art\f14.jpeg" />
+    <Content Include="Content\style\images\art\f15.jpeg" />
+    <Content Include="Content\style\images\art\f16.jpeg" />
+    <Content Include="Content\style\images\art\f17.jpeg" />
+    <Content Include="Content\style\images\art\f2.jpeg" />
+    <Content Include="Content\style\images\art\f3.jpeg" />
+    <Content Include="Content\style\images\art\f4.jpeg" />
+    <Content Include="Content\style\images\art\f5.jpeg" />
+    <Content Include="Content\style\images\art\f6.jpeg" />
+    <Content Include="Content\style\images\art\f7.jpeg" />
+    <Content Include="Content\style\images\art\f8.jpeg" />
+    <Content Include="Content\style\images\art\f9.jpeg" />
+    <Content Include="Content\style\images\art\fm1-full.jpeg" />
+    <Content Include="Content\style\images\art\fm1.jpeg" />
+    <Content Include="Content\style\images\art\fm10-full.jpeg" />
+    <Content Include="Content\style\images\art\fm10.jpeg" />
+    <Content Include="Content\style\images\art\fm11-full.jpeg" />
+    <Content Include="Content\style\images\art\fm11.jpeg" />
+    <Content Include="Content\style\images\art\fm12-full.jpeg" />
+    <Content Include="Content\style\images\art\fm12.jpeg" />
+    <Content Include="Content\style\images\art\fm13-full.jpeg" />
+    <Content Include="Content\style\images\art\fm13.jpeg" />
+    <Content Include="Content\style\images\art\fm14-full.jpeg" />
+    <Content Include="Content\style\images\art\fm14.jpeg" />
+    <Content Include="Content\style\images\art\fm15-full.jpeg" />
+    <Content Include="Content\style\images\art\fm15.jpeg" />
+    <Content Include="Content\style\images\art\fm16-full.jpeg" />
+    <Content Include="Content\style\images\art\fm16.jpeg" />
+    <Content Include="Content\style\images\art\fm17-full.jpeg" />
+    <Content Include="Content\style\images\art\fm17.jpeg" />
+    <Content Include="Content\style\images\art\fm18-full.jpeg" />
+    <Content Include="Content\style\images\art\fm18.jpeg" />
+    <Content Include="Content\style\images\art\fm19-full.jpeg" />
+    <Content Include="Content\style\images\art\fm19.jpeg" />
+    <Content Include="Content\style\images\art\fm2-full.jpeg" />
+    <Content Include="Content\style\images\art\fm2.jpeg" />
+    <Content Include="Content\style\images\art\fm20-full.jpeg" />
+    <Content Include="Content\style\images\art\fm20.jpeg" />
+    <Content Include="Content\style\images\art\fm3-full.jpeg" />
+    <Content Include="Content\style\images\art\fm3.jpeg" />
+    <Content Include="Content\style\images\art\fm4-full.jpeg" />
+    <Content Include="Content\style\images\art\fm4.jpeg" />
+    <Content Include="Content\style\images\art\fm5-full.jpeg" />
+    <Content Include="Content\style\images\art\fm5.jpeg" />
+    <Content Include="Content\style\images\art\fm6-full.jpeg" />
+    <Content Include="Content\style\images\art\fm6.jpeg" />
+    <Content Include="Content\style\images\art\fm7-full.jpeg" />
+    <Content Include="Content\style\images\art\fm7.jpeg" />
+    <Content Include="Content\style\images\art\fm8-full.jpeg" />
+    <Content Include="Content\style\images\art\fm8.jpeg" />
+    <Content Include="Content\style\images\art\fm9-full.jpeg" />
+    <Content Include="Content\style\images\art\fm9.jpeg" />
+    <Content Include="Content\style\images\art\fs1.jpeg" />
+    <Content Include="Content\style\images\art\fs2.jpeg" />
+    <Content Include="Content\style\images\art\fs3.jpeg" />
+    <Content Include="Content\style\images\art\fs4.jpeg" />
+    <Content Include="Content\style\images\art\fs5.jpeg" />
+    <Content Include="Content\style\images\art\fs6.jpeg" />
+    <Content Include="Content\style\images\art\fs7.jpeg" />
+    <Content Include="Content\style\images\art\fs8.jpeg" />
+    <Content Include="Content\style\images\art\ib1.jpeg" />
+    <Content Include="Content\style\images\art\ib10.jpeg" />
+    <Content Include="Content\style\images\art\ib11.jpeg" />
+    <Content Include="Content\style\images\art\ib12.jpeg" />
+    <Content Include="Content\style\images\art\ib2.jpeg" />
+    <Content Include="Content\style\images\art\ib3.jpeg" />
+    <Content Include="Content\style\images\art\ib4.jpeg" />
+    <Content Include="Content\style\images\art\ib5.jpeg" />
+    <Content Include="Content\style\images\art\ib6.jpeg" />
+    <Content Include="Content\style\images\art\ib7.jpeg" />
+    <Content Include="Content\style\images\art\ib8.jpeg" />
+    <Content Include="Content\style\images\art\ib9.jpeg" />
+    <Content Include="Content\style\images\art\j1-full.jpeg" />
+    <Content Include="Content\style\images\art\j1.jpeg" />
+    <Content Include="Content\style\images\art\j10-full.jpeg" />
+    <Content Include="Content\style\images\art\j10.jpeg" />
+    <Content Include="Content\style\images\art\j11-full.jpeg" />
+    <Content Include="Content\style\images\art\j11.jpeg" />
+    <Content Include="Content\style\images\art\j12-full.jpeg" />
+    <Content Include="Content\style\images\art\j12.jpeg" />
+    <Content Include="Content\style\images\art\j13-full.jpeg" />
+    <Content Include="Content\style\images\art\j13.jpeg" />
+    <Content Include="Content\style\images\art\j14-full.jpeg" />
+    <Content Include="Content\style\images\art\j14.jpeg" />
+    <Content Include="Content\style\images\art\j15-full.jpeg" />
+    <Content Include="Content\style\images\art\j15.jpeg" />
+    <Content Include="Content\style\images\art\j16-full.jpeg" />
+    <Content Include="Content\style\images\art\j16.jpeg" />
+    <Content Include="Content\style\images\art\j17-full.jpeg" />
+    <Content Include="Content\style\images\art\j17.jpeg" />
+    <Content Include="Content\style\images\art\j18-full.jpeg" />
+    <Content Include="Content\style\images\art\j18.jpeg" />
+    <Content Include="Content\style\images\art\j19-full.jpeg" />
+    <Content Include="Content\style\images\art\j19.jpeg" />
+    <Content Include="Content\style\images\art\j2-full.jpeg" />
+    <Content Include="Content\style\images\art\j2.jpeg" />
+    <Content Include="Content\style\images\art\j20-full.jpeg" />
+    <Content Include="Content\style\images\art\j20.jpeg" />
+    <Content Include="Content\style\images\art\j21-full.jpeg" />
+    <Content Include="Content\style\images\art\j21.jpeg" />
+    <Content Include="Content\style\images\art\j22-full.jpeg" />
+    <Content Include="Content\style\images\art\j22.jpeg" />
+    <Content Include="Content\style\images\art\j23-full.jpeg" />
+    <Content Include="Content\style\images\art\j23.jpeg" />
+    <Content Include="Content\style\images\art\j24-full.jpeg" />
+    <Content Include="Content\style\images\art\j24.jpeg" />
+    <Content Include="Content\style\images\art\j25-full.jpeg" />
+    <Content Include="Content\style\images\art\j25.jpeg" />
+    <Content Include="Content\style\images\art\j26-full.jpeg" />
+    <Content Include="Content\style\images\art\j26.jpeg" />
+    <Content Include="Content\style\images\art\j27-full.jpeg" />
+    <Content Include="Content\style\images\art\j27.jpeg" />
+    <Content Include="Content\style\images\art\j28-full.jpeg" />
+    <Content Include="Content\style\images\art\j28.jpeg" />
+    <Content Include="Content\style\images\art\j29-full.jpeg" />
+    <Content Include="Content\style\images\art\j29.jpeg" />
+    <Content Include="Content\style\images\art\j3-full.jpeg" />
+    <Content Include="Content\style\images\art\j3.jpeg" />
+    <Content Include="Content\style\images\art\j30-full.jpeg" />
+    <Content Include="Content\style\images\art\j30.jpeg" />
+    <Content Include="Content\style\images\art\j31-full.jpeg" />
+    <Content Include="Content\style\images\art\j31.jpeg" />
+    <Content Include="Content\style\images\art\j32-full.jpeg" />
+    <Content Include="Content\style\images\art\j32.jpeg" />
+    <Content Include="Content\style\images\art\j4-full.jpeg" />
+    <Content Include="Content\style\images\art\j4.jpeg" />
+    <Content Include="Content\style\images\art\j5-full.jpeg" />
+    <Content Include="Content\style\images\art\j5.jpeg" />
+    <Content Include="Content\style\images\art\j6-full.jpeg" />
+    <Content Include="Content\style\images\art\j6.jpeg" />
+    <Content Include="Content\style\images\art\j7-full.jpeg" />
+    <Content Include="Content\style\images\art\j7.jpeg" />
+    <Content Include="Content\style\images\art\j8-full.jpeg" />
+    <Content Include="Content\style\images\art\j8.jpeg" />
+    <Content Include="Content\style\images\art\j9-full.jpeg" />
+    <Content Include="Content\style\images\art\j9.jpeg" />
+    <Content Include="Content\style\images\art\jp1.jpeg" />
+    <Content Include="Content\style\images\art\jp10.jpeg" />
+    <Content Include="Content\style\images\art\jp11.jpeg" />
+    <Content Include="Content\style\images\art\jp2.jpeg" />
+    <Content Include="Content\style\images\art\jp3.jpeg" />
+    <Content Include="Content\style\images\art\jp4.jpeg" />
+    <Content Include="Content\style\images\art\jp5.jpeg" />
+    <Content Include="Content\style\images\art\jp6.jpeg" />
+    <Content Include="Content\style\images\art\jp7.jpeg" />
+    <Content Include="Content\style\images\art\jp8.jpeg" />
+    <Content Include="Content\style\images\art\jp9.jpeg" />
+    <Content Include="Content\style\images\art\l1-full.jpeg" />
+    <Content Include="Content\style\images\art\l1.jpeg" />
+    <Content Include="Content\style\images\art\l2.jpeg" />
+    <Content Include="Content\style\images\art\l3.jpeg" />
+    <Content Include="Content\style\images\art\l5-full.jpeg" />
+    <Content Include="Content\style\images\art\l5.jpeg" />
+    <Content Include="Content\style\images\art\m1-full.jpeg" />
+    <Content Include="Content\style\images\art\m1.jpeg" />
+    <Content Include="Content\style\images\art\m10-full.jpeg" />
+    <Content Include="Content\style\images\art\m10.jpeg" />
+    <Content Include="Content\style\images\art\m11-full.jpeg" />
+    <Content Include="Content\style\images\art\m11.jpeg" />
+    <Content Include="Content\style\images\art\m12-full.jpeg" />
+    <Content Include="Content\style\images\art\m12.jpeg" />
+    <Content Include="Content\style\images\art\m2-full.jpeg" />
+    <Content Include="Content\style\images\art\m2.jpeg" />
+    <Content Include="Content\style\images\art\m3-full.jpeg" />
+    <Content Include="Content\style\images\art\m3.jpeg" />
+    <Content Include="Content\style\images\art\m4-full.jpeg" />
+    <Content Include="Content\style\images\art\m4.jpeg" />
+    <Content Include="Content\style\images\art\m5.jpeg" />
+    <Content Include="Content\style\images\art\m6-full.jpeg" />
+    <Content Include="Content\style\images\art\m6.jpeg" />
+    <Content Include="Content\style\images\art\m7-full.jpeg" />
+    <Content Include="Content\style\images\art\m7.jpeg" />
+    <Content Include="Content\style\images\art\m8-full.jpeg" />
+    <Content Include="Content\style\images\art\m8.jpeg" />
+    <Content Include="Content\style\images\art\m9.jpeg" />
+    <Content Include="Content\style\images\art\p1.jpeg" />
+    <Content Include="Content\style\images\art\p10.jpeg" />
+    <Content Include="Content\style\images\art\p11.jpeg" />
+    <Content Include="Content\style\images\art\p12.jpeg" />
+    <Content Include="Content\style\images\art\p13.jpeg" />
+    <Content Include="Content\style\images\art\p14.jpeg" />
+    <Content Include="Content\style\images\art\p15.jpeg" />
+    <Content Include="Content\style\images\art\p16-full.jpeg" />
+    <Content Include="Content\style\images\art\p16.jpeg" />
+    <Content Include="Content\style\images\art\p17-full.jpeg" />
+    <Content Include="Content\style\images\art\p17.jpeg" />
+    <Content Include="Content\style\images\art\p18-full.jpeg" />
+    <Content Include="Content\style\images\art\p18.jpeg" />
+    <Content Include="Content\style\images\art\p19-full.jpeg" />
+    <Content Include="Content\style\images\art\p19.jpeg" />
+    <Content Include="Content\style\images\art\p2.jpeg" />
+    <Content Include="Content\style\images\art\p20-full.jpeg" />
+    <Content Include="Content\style\images\art\p20.jpeg" />
+    <Content Include="Content\style\images\art\p21-full.jpeg" />
+    <Content Include="Content\style\images\art\p21.jpeg" />
+    <Content Include="Content\style\images\art\p22-full.jpeg" />
+    <Content Include="Content\style\images\art\p22.jpeg" />
+    <Content Include="Content\style\images\art\p23-full.jpeg" />
+    <Content Include="Content\style\images\art\p23.jpeg" />
+    <Content Include="Content\style\images\art\p24-full.jpeg" />
+    <Content Include="Content\style\images\art\p24.jpeg" />
+    <Content Include="Content\style\images\art\p25-full.jpeg" />
+    <Content Include="Content\style\images\art\p25.jpeg" />
+    <Content Include="Content\style\images\art\p26-full.jpeg" />
+    <Content Include="Content\style\images\art\p26.jpeg" />
+    <Content Include="Content\style\images\art\p27-full.jpeg" />
+    <Content Include="Content\style\images\art\p27.jpeg" />
+    <Content Include="Content\style\images\art\p28-full.jpeg" />
+    <Content Include="Content\style\images\art\p28.jpeg" />
+    <Content Include="Content\style\images\art\p3.jpeg" />
+    <Content Include="Content\style\images\art\p4.jpeg" />
+    <Content Include="Content\style\images\art\p5.jpeg" />
+    <Content Include="Content\style\images\art\p6.jpeg" />
+    <Content Include="Content\style\images\art\p7.jpeg" />
+    <Content Include="Content\style\images\art\p8.jpeg" />
+    <Content Include="Content\style\images\art\p9.jpeg" />
+    <Content Include="Content\style\images\art\pm1-full.jpeg" />
+    <Content Include="Content\style\images\art\pm1.jpeg" />
+    <Content Include="Content\style\images\art\pm10-full.jpeg" />
+    <Content Include="Content\style\images\art\pm10.jpeg" />
+    <Content Include="Content\style\images\art\pm11-full.jpeg" />
+    <Content Include="Content\style\images\art\pm11.jpeg" />
+    <Content Include="Content\style\images\art\pm12-full.jpeg" />
+    <Content Include="Content\style\images\art\pm12.jpeg" />
+    <Content Include="Content\style\images\art\pm13-full.jpeg" />
+    <Content Include="Content\style\images\art\pm13.jpeg" />
+    <Content Include="Content\style\images\art\pm14-full.jpeg" />
+    <Content Include="Content\style\images\art\pm14.jpeg" />
+    <Content Include="Content\style\images\art\pm15-full.jpeg" />
+    <Content Include="Content\style\images\art\pm15.jpeg" />
+    <Content Include="Content\style\images\art\pm16-full.jpeg" />
+    <Content Include="Content\style\images\art\pm16.jpeg" />
+    <Content Include="Content\style\images\art\pm17-full.jpeg" />
+    <Content Include="Content\style\images\art\pm17.jpeg" />
+    <Content Include="Content\style\images\art\pm18-full.jpeg" />
+    <Content Include="Content\style\images\art\pm18.jpeg" />
+    <Content Include="Content\style\images\art\pm2-full.jpeg" />
+    <Content Include="Content\style\images\art\pm2.jpeg" />
+    <Content Include="Content\style\images\art\pm3-full.jpeg" />
+    <Content Include="Content\style\images\art\pm3.jpeg" />
+    <Content Include="Content\style\images\art\pm4-full.jpeg" />
+    <Content Include="Content\style\images\art\pm4.jpeg" />
+    <Content Include="Content\style\images\art\pm5-full.jpeg" />
+    <Content Include="Content\style\images\art\pm5.jpeg" />
+    <Content Include="Content\style\images\art\pm6-full.jpeg" />
+    <Content Include="Content\style\images\art\pm6.jpeg" />
+    <Content Include="Content\style\images\art\pm7-full.jpeg" />
+    <Content Include="Content\style\images\art\pm7.jpeg" />
+    <Content Include="Content\style\images\art\pm8-full.jpeg" />
+    <Content Include="Content\style\images\art\pm8.jpeg" />
+    <Content Include="Content\style\images\art\pm9-full.jpeg" />
+    <Content Include="Content\style\images\art\pm9.jpeg" />
+    <Content Include="Content\style\images\art\po1.jpeg" />
+    <Content Include="Content\style\images\art\po10.jpeg" />
+    <Content Include="Content\style\images\art\po11.jpeg" />
+    <Content Include="Content\style\images\art\po3.jpeg" />
+    <Content Include="Content\style\images\art\po5.jpeg" />
+    <Content Include="Content\style\images\art\po6.jpeg" />
+    <Content Include="Content\style\images\art\po7.jpeg" />
+    <Content Include="Content\style\images\art\po8.jpeg" />
+    <Content Include="Content\style\images\art\po9.jpeg" />
+    <Content Include="Content\style\images\art\pp1.jpeg" />
+    <Content Include="Content\style\images\art\pp2.jpeg" />
+    <Content Include="Content\style\images\art\pp3.jpeg" />
+    <Content Include="Content\style\images\art\pp4.jpeg" />
+    <Content Include="Content\style\images\art\pp5.jpeg" />
+    <Content Include="Content\style\images\art\pp6.jpeg" />
+    <Content Include="Content\style\images\art\pp7.jpeg" />
+    <Content Include="Content\style\images\art\pp8.jpeg" />
+    <Content Include="Content\style\images\art\r1.jpeg" />
+    <Content Include="Content\style\images\art\r2.jpeg" />
+    <Content Include="Content\style\images\art\r3.jpeg" />
+    <Content Include="Content\style\images\art\r4.jpeg" />
+    <Content Include="Content\style\images\art\sg1.jpeg" />
+    <Content Include="Content\style\images\art\sg10.jpeg" />
+    <Content Include="Content\style\images\art\sg11.jpeg" />
+    <Content Include="Content\style\images\art\sg12.jpeg" />
+    <Content Include="Content\style\images\art\sg13.jpeg" />
+    <Content Include="Content\style\images\art\sg14.jpeg" />
+    <Content Include="Content\style\images\art\sg15.jpeg" />
+    <Content Include="Content\style\images\art\sg16.jpeg" />
+    <Content Include="Content\style\images\art\sg2.jpeg" />
+    <Content Include="Content\style\images\art\sg3.jpeg" />
+    <Content Include="Content\style\images\art\sg4.jpeg" />
+    <Content Include="Content\style\images\art\sg5.jpeg" />
+    <Content Include="Content\style\images\art\sg6.jpeg" />
+    <Content Include="Content\style\images\art\sg7.jpeg" />
+    <Content Include="Content\style\images\art\sg8.jpeg" />
+    <Content Include="Content\style\images\art\sg9.jpeg" />
+    <Content Include="Content\style\images\art\sh1.jpeg" />
+    <Content Include="Content\style\images\art\sh10.jpeg" />
+    <Content Include="Content\style\images\art\sh11.jpeg" />
+    <Content Include="Content\style\images\art\sh2.jpeg" />
+    <Content Include="Content\style\images\art\sh3.jpeg" />
+    <Content Include="Content\style\images\art\sh4.jpeg" />
+    <Content Include="Content\style\images\art\sh5.jpeg" />
+    <Content Include="Content\style\images\art\sh6.jpeg" />
+    <Content Include="Content\style\images\art\sh7.jpeg" />
+    <Content Include="Content\style\images\art\sh8.jpeg" />
+    <Content Include="Content\style\images\art\sh9.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg1.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg10.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg11.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg12.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg13.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg14.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg15.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg16.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg17.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg18.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg19.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg2.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg20.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg21.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg22.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg23.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg24.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg25.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg26.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg27.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg28.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg29.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg3.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg30.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg31.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg32.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg33.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg34.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg35.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg36.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg37.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg38.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg39.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg4.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg40.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg41.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg42.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg43.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg44.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg5.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg51.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg52.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg53.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg54.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg55.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg56.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg57.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg58.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg59.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg6.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg60.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg65.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg66.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg67.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg7.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg8.jpeg" />
+    <Content Include="Content\style\images\art\slider-bg9.jpeg" />
+    <Content Include="Content\style\images\art\sp1.jpeg" />
+    <Content Include="Content\style\images\art\sp10.jpeg" />
+    <Content Include="Content\style\images\art\sp11.jpeg" />
+    <Content Include="Content\style\images\art\sp12.jpeg" />
+    <Content Include="Content\style\images\art\sp2.jpeg" />
+    <Content Include="Content\style\images\art\sp3.jpeg" />
+    <Content Include="Content\style\images\art\sp4.jpeg" />
+    <Content Include="Content\style\images\art\sp5.jpeg" />
+    <Content Include="Content\style\images\art\sp6.jpeg" />
+    <Content Include="Content\style\images\art\sp7.jpeg" />
+    <Content Include="Content\style\images\art\sp8.jpeg" />
+    <Content Include="Content\style\images\art\sp9.jpeg" />
+    <Content Include="Content\style\images\art\spp1.jpeg" />
+    <Content Include="Content\style\images\art\spp2.jpeg" />
+    <Content Include="Content\style\images\art\spp3.jpeg" />
+    <Content Include="Content\style\images\art\ss1.jpeg" />
+    <Content Include="Content\style\images\art\ss2.jpeg" />
+    <Content Include="Content\style\images\art\ss3.jpeg" />
+    <Content Include="Content\style\images\art\ss4.jpeg" />
+    <Content Include="Content\style\images\art\ss5.jpeg" />
+    <Content Include="Content\style\images\art\ss6.jpeg" />
+    <Content Include="Content\style\images\art\ss7.jpeg" />
+    <Content Include="Content\style\images\art\ss8.jpeg" />
+    <Content Include="Content\style\images\art\t1.jpeg" />
+    <Content Include="Content\style\images\art\t10.jpeg" />
+    <Content Include="Content\style\images\art\t11.jpeg" />
+    <Content Include="Content\style\images\art\t12.jpeg" />
+    <Content Include="Content\style\images\art\t2.jpeg" />
+    <Content Include="Content\style\images\art\t3.jpeg" />
+    <Content Include="Content\style\images\art\t4.jpeg" />
+    <Content Include="Content\style\images\art\t5.jpeg" />
+    <Content Include="Content\style\images\art\t6.jpeg" />
+    <Content Include="Content\style\images\art\t7.jpeg" />
+    <Content Include="Content\style\images\art\t8.jpeg" />
+    <Content Include="Content\style\images\art\t9.jpeg" />
+    <Content Include="Content\style\images\art\te1.jpeg" />
+    <Content Include="Content\style\images\art\te2.jpeg" />
+    <Content Include="Content\style\images\art\te3.jpeg" />
+    <Content Include="Content\style\images\art\te4.jpeg" />
+    <Content Include="Content\style\images\art\te5.jpeg" />
+    <Content Include="Content\style\images\art\te6.jpeg" />
+    <Content Include="Content\style\images\art\tg1-1.jpeg" />
+    <Content Include="Content\style\images\art\tg1-2.jpeg" />
+    <Content Include="Content\style\images\art\tg1-3.jpeg" />
+    <Content Include="Content\style\images\art\tg1-4.jpeg" />
+    <Content Include="Content\style\images\art\tg1-5.jpeg" />
+    <Content Include="Content\style\images\art\tg1-6.jpeg" />
+    <Content Include="Content\style\images\art\tg1-7.jpeg" />
+    <Content Include="Content\style\images\art\tg1-8.jpeg" />
+    <Content Include="Content\style\images\art\tg1.jpeg" />
+    <Content Include="Content\style\images\art\tg2-1.jpeg" />
+    <Content Include="Content\style\images\art\tg2-2.jpeg" />
+    <Content Include="Content\style\images\art\tg2-3.jpeg" />
+    <Content Include="Content\style\images\art\tg2-4.jpeg" />
+    <Content Include="Content\style\images\art\tg2-5.jpeg" />
+    <Content Include="Content\style\images\art\tg2-6.jpeg" />
+    <Content Include="Content\style\images\art\tg2-7.jpeg" />
+    <Content Include="Content\style\images\art\tg2-8.jpeg" />
+    <Content Include="Content\style\images\art\tg2-9.jpeg" />
+    <Content Include="Content\style\images\art\tg2.jpeg" />
+    <Content Include="Content\style\images\art\tg3-1.jpeg" />
+    <Content Include="Content\style\images\art\tg3-2.jpeg" />
+    <Content Include="Content\style\images\art\tg3-3.jpeg" />
+    <Content Include="Content\style\images\art\tg3-4.jpeg" />
+    <Content Include="Content\style\images\art\tg3-5.jpeg" />
+    <Content Include="Content\style\images\art\tg3-6.jpeg" />
+    <Content Include="Content\style\images\art\tg3-7.jpeg" />
+    <Content Include="Content\style\images\art\tg3-8.jpeg" />
+    <Content Include="Content\style\images\art\tg3-9.jpeg" />
+    <Content Include="Content\style\images\art\tg3.jpeg" />
+    <Content Include="Content\style\images\art\tg4-1.jpeg" />
+    <Content Include="Content\style\images\art\tg4-2.jpeg" />
+    <Content Include="Content\style\images\art\tg4-3.jpeg" />
+    <Content Include="Content\style\images\art\tg4-4.jpeg" />
+    <Content Include="Content\style\images\art\tg4-5.jpeg" />
+    <Content Include="Content\style\images\art\tg4-6.jpeg" />
+    <Content Include="Content\style\images\art\tg4-7.jpeg" />
+    <Content Include="Content\style\images\art\tg4-8.jpeg" />
+    <Content Include="Content\style\images\art\tg4.jpeg" />
+    <Content Include="Content\style\images\art\tg5-1.jpeg" />
+    <Content Include="Content\style\images\art\tg5-10.jpeg" />
+    <Content Include="Content\style\images\art\tg5-2.jpeg" />
+    <Content Include="Content\style\images\art\tg5-3.jpeg" />
+    <Content Include="Content\style\images\art\tg5-4.jpeg" />
+    <Content Include="Content\style\images\art\tg5-5.jpeg" />
+    <Content Include="Content\style\images\art\tg5-6.jpeg" />
+    <Content Include="Content\style\images\art\tg5-7.jpeg" />
+    <Content Include="Content\style\images\art\tg5-8.jpeg" />
+    <Content Include="Content\style\images\art\tg5-9.jpeg" />
+    <Content Include="Content\style\images\art\tg5.jpeg" />
+    <Content Include="Content\style\images\art\tg6-1.jpeg" />
+    <Content Include="Content\style\images\art\tg6-2.jpeg" />
+    <Content Include="Content\style\images\art\tg6-3.jpeg" />
+    <Content Include="Content\style\images\art\tg6-4.jpeg" />
+    <Content Include="Content\style\images\art\tg6-5.jpeg" />
+    <Content Include="Content\style\images\art\tg6-6.jpeg" />
+    <Content Include="Content\style\images\art\tg6-7.jpeg" />
+    <Content Include="Content\style\images\art\tg6-8.jpeg" />
+    <Content Include="Content\style\images\art\tg6.jpeg" />
+    <Content Include="Content\style\images\art\tg7-1.jpeg" />
+    <Content Include="Content\style\images\art\tg7-2.jpeg" />
+    <Content Include="Content\style\images\art\tg7-3.jpeg" />
+    <Content Include="Content\style\images\art\tg7-4.jpeg" />
+    <Content Include="Content\style\images\art\tg7-5.jpeg" />
+    <Content Include="Content\style\images\art\tg7-6.jpeg" />
+    <Content Include="Content\style\images\art\tg7-7.jpeg" />
+    <Content Include="Content\style\images\art\tg7.jpeg" />
+    <Content Include="Content\style\images\art\tg8-1.jpeg" />
+    <Content Include="Content\style\images\art\tg8-2.jpeg" />
+    <Content Include="Content\style\images\art\tg8-3.jpeg" />
+    <Content Include="Content\style\images\art\tg8-4.jpeg" />
+    <Content Include="Content\style\images\art\tg8-5.jpeg" />
+    <Content Include="Content\style\images\art\tg8-6.jpeg" />
+    <Content Include="Content\style\images\art\tg8-7.jpeg" />
+    <Content Include="Content\style\images\art\tg8-8.jpeg" />
+    <Content Include="Content\style\images\art\tg8-9.jpeg" />
+    <Content Include="Content\style\images\art\tg8.jpeg" />
+    <Content Include="Content\style\images\art\tg9-1.jpeg" />
+    <Content Include="Content\style\images\art\tg9-2.jpeg" />
+    <Content Include="Content\style\images\art\tg9-3.jpeg" />
+    <Content Include="Content\style\images\art\tg9-4.jpeg" />
+    <Content Include="Content\style\images\art\tg9-5.jpeg" />
+    <Content Include="Content\style\images\art\tg9-6.jpeg" />
+    <Content Include="Content\style\images\art\tg9-7.jpeg" />
+    <Content Include="Content\style\images\art\tg9-8.jpeg" />
+    <Content Include="Content\style\images\art\tg9.jpeg" />
+    <Content Include="Content\style\images\art\u1.jpeg" />
+    <Content Include="Content\style\images\art\u2.jpeg" />
+    <Content Include="Content\style\images\art\u3.jpeg" />
+    <Content Include="Content\style\images\art\u4.jpeg" />
+    <Content Include="Content\style\images\art\vc1.jpeg" />
+    <Content Include="Content\style\images\art\vc2.jpeg" />
+    <Content Include="Content\style\images\art\vc3.jpeg" />
+    <Content Include="Content\style\images\art\vc4.jpeg" />
+    <Content Include="Content\style\images\art\vc5.jpeg" />
+    <Content Include="Content\style\images\art\vc6.jpeg" />
+    <Content Include="Content\style\images\art\vc7.jpeg" />
+    <Content Include="Content\style\images\art\vc8.jpeg" />
+    <Content Include="Content\style\images\art\w1.jpeg" />
+    <Content Include="Content\style\images\art\w10.jpeg" />
+    <Content Include="Content\style\images\art\w11.jpeg" />
+    <Content Include="Content\style\images\art\w12.jpeg" />
+    <Content Include="Content\style\images\art\w2.jpeg" />
+    <Content Include="Content\style\images\art\w3.jpeg" />
+    <Content Include="Content\style\images\art\w4.jpeg" />
+    <Content Include="Content\style\images\art\w5.jpeg" />
+    <Content Include="Content\style\images\art\w6.jpeg" />
+    <Content Include="Content\style\images\art\w7.jpeg" />
+    <Content Include="Content\style\images\art\w8.jpeg" />
+    <Content Include="Content\style\images\art\w9.jpeg" />
+    <Content Include="Content\style\images\art\wp1.jpeg" />
+    <Content Include="Content\style\images\art\wp10.jpeg" />
+    <Content Include="Content\style\images\art\wp11.jpeg" />
+    <Content Include="Content\style\images\art\wp12.jpeg" />
+    <Content Include="Content\style\images\art\wp13.jpeg" />
+    <Content Include="Content\style\images\art\wp14.jpeg" />
+    <Content Include="Content\style\images\art\wp2.jpeg" />
+    <Content Include="Content\style\images\art\wp3.jpeg" />
+    <Content Include="Content\style\images\art\wp4.jpeg" />
+    <Content Include="Content\style\images\art\wp5.jpeg" />
+    <Content Include="Content\style\images\art\wp6.jpeg" />
+    <Content Include="Content\style\images\art\wp7.jpeg" />
+    <Content Include="Content\style\images\art\wp8.jpeg" />
+    <Content Include="Content\style\images\art\wp9.jpeg" />
+    <Content Include="Content\style\images\dummy.png" />
+    <Content Include="Content\style\images\favicon.png" />
+    <Content Include="Content\style\images\loading.gif" />
+    <Content Include="Content\style\images\logo%402x.png" />
+    <Content Include="Content\style\images\logo-light%402x.png" />
+    <Content Include="Content\style\images\logo-light.png" />
+    <Content Include="Content\style\images\logo.png" />
+    <Content Include="Content\style\images\video-play.png" />
+    <Content Include="Content\style\images\vimeo-play.png" />
+    <Content Include="Content\style\images\youtube-play.png" />
+    <Content Include="Content\style\js\bootstrap.min.js" />
+    <Content Include="Content\style\js\jquery.min.js" />
+    <Content Include="Content\style\js\plugins.js" />
+    <Content Include="Content\style\js\popper.min.js" />
+    <Content Include="Content\style\js\scripts.js" />
+    <Content Include="Content\style\media\swimming.jpeg" />
+    <Content Include="Content\style\media\swimming.mp4" />
+    <Content Include="Content\style\revolution\assets\coloredbg.png" />
+    <Content Include="Content\style\revolution\assets\gridtile.png" />
+    <Content Include="Content\style\revolution\assets\gridtile_3x3.png" />
+    <Content Include="Content\style\revolution\assets\gridtile_3x3_white.png" />
+    <Content Include="Content\style\revolution\assets\gridtile_white.png" />
+    <Content Include="Content\style\revolution\assets\loader.gif" />
+    <Content Include="Content\style\revolution\css\closedhand.txt" />
+    <Content Include="Content\style\revolution\css\layers.css" />
+    <Content Include="Content\style\revolution\css\navigation.css" />
+    <Content Include="Content\style\revolution\css\openhand.txt" />
+    <Content Include="Content\style\revolution\css\settings.css" />
+    <Content Include="Content\style\revolution\fonts\revicons\revicons.svg" />
+    <Content Include="Content\style\revolution\js\jquery.themepunch.revolution.min.js" />
+    <Content Include="Content\style\revolution\js\jquery.themepunch.tools.min.js" />
+    <Content Include="Content\style\revolution\revolution-addons\filmstrip\css\revolution.addon.filmstrip.css" />
+    <Content Include="Content\style\revolution\revolution-addons\filmstrip\js\revolution.addon.filmstrip.min.js" />
+    <Content Include="Content\style\revolution\revolution-addons\typewriter\css\typewriter.css" />
+    <Content Include="Content\style\revolution\revolution-addons\typewriter\js\revolution.addon.typewriter.min.js" />
+    <Content Include="Content\style\style.css" />
+    <Content Include="Content\style\type\elemis\elemis.svg" />
+    <Content Include="Content\style\type\fontawesome\fontawesome-webfont.svg" />
+    <Content Include="Content\style\type\fontawesome\fontawesome-webfont.txt" />
+    <Content Include="Content\style\type\icons.css" />
+    <Content Include="Content\style\type\lg\lg.svg" />
+    <Content Include="Content\style\type\montserrat\Montserrat-Bold.txt" />
+    <Content Include="Content\style\type\montserrat\Montserrat-BoldItalic.txt" />
+    <Content Include="Content\style\type\montserrat\Montserrat-Italic.txt" />
+    <Content Include="Content\style\type\montserrat\Montserrat-Light.txt" />
+    <Content Include="Content\style\type\montserrat\Montserrat-LightItalic.txt" />
+    <Content Include="Content\style\type\montserrat\Montserrat-Medium.txt" />
+    <Content Include="Content\style\type\montserrat\Montserrat-MediumItalic.txt" />
+    <Content Include="Content\style\type\montserrat\Montserrat-Regular.txt" />
+    <Content Include="Content\style\type\montserrat\Montserrat-SemiBold.txt" />
+    <Content Include="Content\style\type\montserrat\Montserrat-SemiBoldItalic.txt" />
+    <Content Include="Content\style\type\slimicons\Slimicons.svg" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\style\revolution\fonts\revicons\revicons.eot" />
+    <Content Include="Content\style\revolution\fonts\revicons\revicons.ttf" />
+    <Content Include="Content\style\revolution\fonts\revicons\revicons.woff" />
+    <Content Include="Content\style\type\elemis\elemis.eot" />
+    <Content Include="Content\style\type\elemis\elemis.ttf" />
+    <Content Include="Content\style\type\elemis\elemis.woff" />
+    <Content Include="Content\style\type\fontawesome\fontawesome-webfont-1.eot" />
+    <Content Include="Content\style\type\fontawesome\fontawesome-webfont.eot" />
+    <Content Include="Content\style\type\fontawesome\fontawesome-webfont.ttf" />
+    <Content Include="Content\style\type\fontawesome\fontawesome-webfont.woff" />
+    <Content Include="Content\style\type\lg\lg-1.eot" />
+    <Content Include="Content\style\type\lg\lg.eot" />
+    <Content Include="Content\style\type\lg\lg.ttf" />
+    <Content Include="Content\style\type\lg\lg.woff" />
+    <Content Include="Content\style\type\montserrat\Montserrat-Bold-1.eot" />
+    <Content Include="Content\style\type\montserrat\Montserrat-Bold.eot" />
+    <Content Include="Content\style\type\montserrat\Montserrat-Bold.ttf" />
+    <Content Include="Content\style\type\montserrat\Montserrat-Bold.woff" />
+    <Content Include="Content\style\type\montserrat\Montserrat-BoldItalic-1.eot" />
+    <Content Include="Content\style\type\montserrat\Montserrat-BoldItalic.eot" />
+    <Content Include="Content\style\type\montserrat\Montserrat-BoldItalic.ttf" />
+    <Content Include="Content\style\type\montserrat\Montserrat-BoldItalic.woff" />
+    <Content Include="Content\style\type\montserrat\Montserrat-Italic-1.eot" />
+    <Content Include="Content\style\type\montserrat\Montserrat-Italic.eot" />
+    <Content Include="Content\style\type\montserrat\Montserrat-Italic.ttf" />
+    <Content Include="Content\style\type\montserrat\Montserrat-Italic.woff" />
+    <Content Include="Content\style\type\montserrat\Montserrat-Light-1.eot" />
+    <Content Include="Content\style\type\montserrat\Montserrat-Light.eot" />
+    <Content Include="Content\style\type\montserrat\Montserrat-Light.ttf" />
+    <Content Include="Content\style\type\montserrat\Montserrat-Light.woff" />
+    <Content Include="Content\style\type\montserrat\Montserrat-LightItalic-1.eot" />
+    <Content Include="Content\style\type\montserrat\Montserrat-LightItalic.eot" />
+    <Content Include="Content\style\type\montserrat\Montserrat-LightItalic.ttf" />
+    <Content Include="Content\style\type\montserrat\Montserrat-LightItalic.woff" />
+    <Content Include="Content\style\type\montserrat\Montserrat-Medium-1.eot" />
+    <Content Include="Content\style\type\montserrat\Montserrat-Medium.eot" />
+    <Content Include="Content\style\type\montserrat\Montserrat-Medium.ttf" />
+    <Content Include="Content\style\type\montserrat\Montserrat-Medium.woff" />
+    <Content Include="Content\style\type\montserrat\Montserrat-MediumItalic-1.eot" />
+    <Content Include="Content\style\type\montserrat\Montserrat-MediumItalic.eot" />
+    <Content Include="Content\style\type\montserrat\Montserrat-MediumItalic.ttf" />
+    <Content Include="Content\style\type\montserrat\Montserrat-MediumItalic.woff" />
+    <Content Include="Content\style\type\montserrat\Montserrat-Regular-1.eot" />
+    <Content Include="Content\style\type\montserrat\Montserrat-Regular.eot" />
+    <Content Include="Content\style\type\montserrat\Montserrat-Regular.ttf" />
+    <Content Include="Content\style\type\montserrat\Montserrat-Regular.woff" />
+    <Content Include="Content\style\type\montserrat\Montserrat-SemiBold-1.eot" />
+    <Content Include="Content\style\type\montserrat\Montserrat-SemiBold.eot" />
+    <Content Include="Content\style\type\montserrat\Montserrat-SemiBold.ttf" />
+    <Content Include="Content\style\type\montserrat\Montserrat-SemiBold.woff" />
+    <Content Include="Content\style\type\montserrat\Montserrat-SemiBoldItalic-1.eot" />
+    <Content Include="Content\style\type\montserrat\Montserrat-SemiBoldItalic.eot" />
+    <Content Include="Content\style\type\montserrat\Montserrat-SemiBoldItalic.ttf" />
+    <Content Include="Content\style\type\montserrat\Montserrat-SemiBoldItalic.woff" />
+    <Content Include="Content\style\type\slimicons\Slimicons.eot" />
+    <Content Include="Content\style\type\slimicons\Slimicons.ttf" />
+    <Content Include="Content\style\type\slimicons\Slimicons.woff" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57606</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:57606/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
