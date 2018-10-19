@@ -30,7 +30,7 @@ a.more,
 }
 body,
 .lg-sub-html p {
-    font-size: 19px;    
+    font-size: 19px;
 }
 body,
 li,
@@ -243,14 +243,14 @@ h2.post-title {
 }
 .meta,
 a.more,
-.text-muted, 
-.meta, 
-a.more, 
-.meta span:after, 
-.meta * {   
+.text-muted,
+.meta,
+a.more,
+.meta span:after,
+.meta * {
     color: #999;
 }
-.meta, 
+.meta,
 a.more {
 	letter-spacing: 1px;
 }
@@ -352,7 +352,7 @@ label:not(.custom-control-label),
 }
 .counter p {
 	font-size: 17px;
-    line-height: 23px; 
+    line-height: 23px;
 }
 blockquote p {
     font-size: 21px;

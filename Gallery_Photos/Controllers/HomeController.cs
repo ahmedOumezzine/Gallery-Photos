@@ -1,16 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace Gallery_Photos.Controllers
 {
-
     public class HomeController : Controller
     {
-
-         public ActionResult Index()
+        public ActionResult Index()
         {
             return View();
         }
@@ -25,8 +20,8 @@ namespace Gallery_Photos.Controllers
             // Wait for all finalizers to complete before continuing.
             GC.WaitForPendingFinalizers();
             return File(fileContents, contentType);
-
         }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

@@ -1,5 +1,4 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -10,52 +9,46 @@
     <title>Gallery Photo</title>
     <link rel="stylesheet" type="text/css" href="~/Content/style/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="~/Content/style/css/plugins.css">
-         <link rel="stylesheet" type="text/css" href="~/Content/style/type/icons.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/style/type/icons.css">
     <link rel="stylesheet" type="text/css" href="~/Content/style/style.css">
-     <link href='https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i' rel='stylesheet' type='text/css'>
 </head>
 <body>
     <div class="content-wrapper">
         <nav class="navbar solid nav-wrapper-dark inverse-text navbar-expand-lg">
             <div class="container">
                 <div class="navbar-header">
-                    <div class="navbar-brand"><a href="index.html"><img src="#" srcset="~/Content/style/images/logo.png 1x, ~/Content/style/images/logo.png 2x" alt="" /></a></div>
+                    <div class="navbar-brand"><a href="@Url.Action("Index","Home")"><img src="#" srcset="~/Content/style/images/logo.png 1x, ~/Content/style/images/logo.png 2x" alt="" /></a></div>
                     <div class="navbar-hamburger ml-auto d-lg-none d-xl-none"><button class="hamburger animate" data-toggle="collapse" data-target=".navbar-collapse"><span></span></button></div>
                 </div>
-                <!-- /.navbar-header -->
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Home</a>
-                             <!--/.dropdown-menu -->
+                            <a class="nav-link" href="@Url.Action("Index","Home")">Home</a>
                         </li>
-                     
-                    </ul> 
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Add","Photos")">Add Picture</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("About","Home")">About</a>
+                        </li>
+                    </ul>
                 </div>
-                <!-- /.navbar-collapse -->
             </div>
-            <!-- /.container -->
         </nav>
-        <!-- /.navbar -->
         <div class="wrapper light-wrapper">
             @RenderBody()
-           
-            <div class="space90"></div>
-        </div> 
+        </div>
         <footer class="dark-wrapper inverse-text">
             <div class="sub-footer">
                 <div class="container inner text-center">
                     <img src="#" srcset="~/Content/style/images/logo.png 1x, ~/Content/style/images/logo.png 2x" alt="" />
                     <div class="space25"></div>
-                    <p>© 2018 Gallery_Photos.<p>
-                    
+                    <p>© 2018 Gallery Photos.<p>
                 </div>
-                <!-- /.container -->
             </div>
-            <!-- /.sub-footer -->
         </footer>
     </div>
-    <!-- /.content-wrapper -->
     <script src="~/Content/style/js/jquery.min.js"></script>
     <script src="~/Content/style/js/popper.min.js"></script>
     <script src="~/Content/style/js/bootstrap.min.js"></script>

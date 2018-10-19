@@ -521,7 +521,7 @@ hr.double {
     display: none !important;
 }
 .rounded,
-figure.rounded span.bg, 
+figure.rounded span.bg,
 figure.rounded img,
 .rounded.overlay-info figcaption {
     border-radius: 5px !important;
@@ -1678,7 +1678,7 @@ ol {
     border-bottom: 0;
 }
 /*-----------------------------------------------------------------------------------*/
-/*	11. SLIDER REVOLUTION 
+/*	11. SLIDER REVOLUTION
 /*-----------------------------------------------------------------------------------*/
 .rev_slider_wrapper {
     left: 0px;
@@ -1891,7 +1891,7 @@ ol {
     text-align: center;
 }
 /*-----------------------------------------------------------------------------------*/
-/*	15. BLOCK	
+/*	15. BLOCK
 /*-----------------------------------------------------------------------------------*/
 .block-wrapper.arrowed .block:first-child {
     position: relative;
@@ -4760,7 +4760,7 @@ pre {
     position: relative;
 }
 .image-wrapper:not(.box-shadow):not(*:root) {
-    -webkit-transform: translateZ(0)	
+    -webkit-transform: translateZ(0)
 }
 .image-wrapper:not(.mobile) {
     background-attachment: fixed !important
@@ -5626,9 +5626,9 @@ list-blue i {
 /*-----------------------------------------------------------------------------------*/
 /*	52. BOX LAYOUT
 /*-----------------------------------------------------------------------------------*/
-@media (min-width: 1240px) { 
+@media (min-width: 1240px) {
 	.box-layout {
-	    position: relative;    
+	    position: relative;
 	}
 	.box-layout .content-wrapper,
 	.box-layout footer:not(.blockquote-footer) {
@@ -5902,11 +5902,11 @@ list-blue i {
     .image-block-wrapper .box {
         padding: 60px 50px;
     }
-    [class*="table-responsive"] > thead > tr > th, 
+    [class*="table-responsive"] > thead > tr > th,
     [class*="table-responsive"] > tbody > tr > th,
-    [class*="table-responsive"] > tfoot > tr > th, 
+    [class*="table-responsive"] > tfoot > tr > th,
     [class*="table-responsive"] > thead > tr > td,
-    [class*="table-responsive"] > tbody > tr > td, 
+    [class*="table-responsive"] > tbody > tr > td,
     [class*="table-responsive"] > tfoot > tr > td {
         white-space: nowrap
     }
