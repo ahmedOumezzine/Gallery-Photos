@@ -34,10 +34,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/23/2017 13:15:20</publishTime>
     </File>
     <File Include="bin/Gallery_Photos.dll">
-      <publishTime>10/23/2018 17:02:08</publishTime>
+      <publishTime>10/23/2018 17:06:36</publishTime>
     </File>
     <File Include="bin/Gallery_Photos.pdb">
-      <publishTime>10/23/2018 17:02:08</publishTime>
+      <publishTime>10/23/2018 17:06:36</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
       <publishTime>06/27/2017 12:59:34</publishTime>
@@ -3406,10 +3406,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/23/2018 16:07:17</publishTime>
     </File>
     <File Include="Views/Photos/Add.cshtml">
-      <publishTime>10/19/2018 15:04:17</publishTime>
+      <publishTime>10/23/2018 17:06:20</publishTime>
     </File>
     <File Include="Views/Photos/Index.cshtml">
-      <publishTime>10/19/2018 15:04:26</publishTime>
+      <publishTime>10/23/2018 17:06:22</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>10/19/2018 14:59:54</publishTime>

@@ -13,11 +13,9 @@
     <div class="row">
         <div class="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
             <h2 class="section-title mb-40 text-center">Basic Form</h2>
-            @using (Html.BeginForm("Add",
-                                    "Photos",
-                                    FormMethod.Post,
-                                    new { enctype = "multipart/form-data" }))
-            {<div class="form-group">
+            @using (Html.BeginForm("Add", "Photos", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                <div class="form-group">
                     <label for="exampleInputEmail1">name</label>
                     <input type="text" class="form-control" name="namefile" />
                 </div>

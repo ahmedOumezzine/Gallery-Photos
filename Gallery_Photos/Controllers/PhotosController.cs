@@ -34,7 +34,7 @@ namespace Gallery_Photos.Controllers
                     byte[] data = target.ToArray();
                     Models.Picture picture = new Picture();
                     picture.ID = Guid.NewGuid();
-                    picture.images = ImageCompress.Compress(data); // [213380]
+                    picture.images = ImageCompress.Compress(data); 
                     picture.name = file.FileName.Replace(".","") + ".jpg";
                     picture.CreateDate = DateTime.Now;
                   var item=   DefaultContext.Pictures.Add(picture);
@@ -43,7 +43,7 @@ namespace Gallery_Photos.Controllers
                 }
                 catch (Exception ex)
                 {
-                    ViewBag.Message = "ERROR:" + ex.Message.ToString();
+                     ViewBag.Message = "ERROR:" + ex.Message.ToString();
                 }
             else
             {
