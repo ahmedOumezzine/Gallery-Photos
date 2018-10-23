@@ -1,25 +1,30 @@
-﻿using System;
+﻿using Gallery_Photos.Models;
+using System;
+using System.Linq;
 using System.Web.Mvc;
 
 namespace Gallery_Photos.Controllers
 {
     public class HomeController : Controller
     {
+        Models.DefaultContext DefaultContext = new Models.DefaultContext();
+
         public ActionResult Index()
         {
-            return View();
+            var list = DefaultContext.Pictures.ToList();
+            return View(list);
         }
 
         [HttpGet]
         public FileResult GetImage(string id)
         {
-            byte[] fileContents = System.IO.File.ReadAllBytes(Server.MapPath("/Content/style/images/art/tg5-7.jpeg"));
+            byte[] fileContents = DefaultContext.Pictures.Where(x=>x.name==id).SingleOrDefault().images;
             string contentType = "image/jpeg";
             //Force garbage collection.
             GC.Collect();
             // Wait for all finalizers to complete before continuing.
             GC.WaitForPendingFinalizers();
-            return File(fileContents, contentType);
+            return File(ImageCompress.Decompress(fileContents), contentType);
         }
 
         public ActionResult About()

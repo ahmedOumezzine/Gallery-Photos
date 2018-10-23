@@ -88,3 +88,7 @@ C:\Users\AhmedOumezzine\source\Repos\Gallery_Photos\Gallery_Photos\obj\Release\G
 C:\Users\AhmedOumezzine\source\Repos\Gallery_Photos\Gallery_Photos\obj\Release\Gallery_Photos.csproj.CopyComplete
 C:\Users\AhmedOumezzine\source\Repos\Gallery_Photos\Gallery_Photos\obj\Release\Gallery_Photos.dll
 C:\Users\AhmedOumezzine\source\Repos\Gallery_Photos\Gallery_Photos\obj\Release\Gallery_Photos.pdb
+C:\Users\AhmedOumezzine\source\Repos\Gallery_Photos\Gallery_Photos\bin\EntityFramework.dll
+C:\Users\AhmedOumezzine\source\Repos\Gallery_Photos\Gallery_Photos\bin\EntityFramework.SqlServer.dll
+C:\Users\AhmedOumezzine\source\Repos\Gallery_Photos\Gallery_Photos\bin\EntityFramework.xml
+C:\Users\AhmedOumezzine\source\Repos\Gallery_Photos\Gallery_Photos\bin\EntityFramework.SqlServer.xml

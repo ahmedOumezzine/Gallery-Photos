@@ -16,7 +16,7 @@ namespace Gallery_Photos.Models
     public class Picture
     {
         [Key]
-        public int id { get; set; }
+        public Guid ID { get; set; }
 
         public String name { get; set; }
         public Byte[] images { get; set; }

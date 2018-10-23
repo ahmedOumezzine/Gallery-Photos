@@ -10,7 +10,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="ApplicationInsights.config">
-      <publishTime>10/19/2018 09:35:13</publishTime>
+      <publishTime>10/19/2018 14:59:26</publishTime>
+    </File>
+    <File Include="App_Data/GalleryPhotos.mdf">
+      <publishTime>10/19/2018 12:03:13</publishTime>
+    </File>
+    <File Include="App_Data/GalleryPhotos_log.ldf">
+      <publishTime>10/19/2018 12:03:13</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>09/10/2013 16:29:20</publishTime>
@@ -19,13 +25,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/10/2013 16:29:20</publishTime>
     </File>
     <File Include="bin/ApplicationInsights.config">
-      <publishTime>10/19/2018 09:35:13</publishTime>
+      <publishTime>10/19/2018 14:59:26</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>10/23/2017 13:15:18</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>10/23/2017 13:15:20</publishTime>
     </File>
     <File Include="bin/Gallery_Photos.dll">
-      <publishTime>10/19/2018 11:56:02</publishTime>
+      <publishTime>10/23/2018 17:02:08</publishTime>
     </File>
     <File Include="bin/Gallery_Photos.pdb">
-      <publishTime>10/19/2018 11:56:02</publishTime>
+      <publishTime>10/23/2018 17:02:08</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
       <publishTime>06/27/2017 12:59:34</publishTime>
@@ -226,7 +238,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/23/2014 13:57:34</publishTime>
     </File>
     <File Include="Content/bootstrap-theme.css">
-      <publishTime>10/19/2018 09:35:07</publishTime>
+      <publishTime>10/19/2018 14:59:26</publishTime>
     </File>
     <File Include="Content/bootstrap-theme.css.map">
       <publishTime>10/19/2018 09:35:07</publishTime>
@@ -238,7 +250,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/19/2018 09:35:07</publishTime>
     </File>
     <File Include="Content/bootstrap.css">
-      <publishTime>10/19/2018 09:35:07</publishTime>
+      <publishTime>10/19/2018 14:59:27</publishTime>
     </File>
     <File Include="Content/bootstrap.css.map">
       <publishTime>10/19/2018 09:35:07</publishTime>
@@ -250,25 +262,25 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/19/2018 09:35:07</publishTime>
     </File>
     <File Include="Content/Site.css">
-      <publishTime>10/19/2018 09:35:04</publishTime>
+      <publishTime>10/19/2018 14:59:27</publishTime>
     </File>
     <File Include="Content/style/css/bootstrap.min.css">
       <publishTime>10/19/2018 10:16:15</publishTime>
     </File>
     <File Include="Content/style/css/font/font2.css">
-      <publishTime>10/19/2018 10:16:15</publishTime>
+      <publishTime>10/19/2018 14:59:27</publishTime>
     </File>
     <File Include="Content/style/css/font/font3.css">
-      <publishTime>10/19/2018 10:16:15</publishTime>
+      <publishTime>10/19/2018 14:59:28</publishTime>
     </File>
     <File Include="Content/style/css/font/font4.css">
       <publishTime>10/19/2018 10:16:15</publishTime>
     </File>
     <File Include="Content/style/css/font/font5.css">
-      <publishTime>10/19/2018 10:16:15</publishTime>
+      <publishTime>10/19/2018 14:59:29</publishTime>
     </File>
     <File Include="Content/style/css/font/font6.css">
-      <publishTime>10/19/2018 10:16:15</publishTime>
+      <publishTime>10/19/2018 14:59:29</publishTime>
     </File>
     <File Include="Content/style/css/plugins.css">
       <publishTime>10/19/2018 10:16:15</publishTime>
@@ -3040,13 +3052,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/19/2018 10:16:21</publishTime>
     </File>
     <File Include="Content/style/js/plugins.js">
-      <publishTime>10/19/2018 10:16:21</publishTime>
+      <publishTime>10/19/2018 14:59:33</publishTime>
     </File>
     <File Include="Content/style/js/popper.min.js">
       <publishTime>10/19/2018 10:16:21</publishTime>
     </File>
     <File Include="Content/style/js/scripts.js">
-      <publishTime>10/19/2018 10:16:21</publishTime>
+      <publishTime>10/19/2018 14:59:34</publishTime>
     </File>
     <File Include="Content/style/revolution/assets/coloredbg.png">
       <publishTime>10/19/2018 10:16:21</publishTime>
@@ -3070,10 +3082,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/19/2018 10:16:21</publishTime>
     </File>
     <File Include="Content/style/revolution/css/layers.css">
-      <publishTime>10/19/2018 10:16:21</publishTime>
+      <publishTime>10/19/2018 14:59:34</publishTime>
     </File>
     <File Include="Content/style/revolution/css/navigation.css">
-      <publishTime>10/19/2018 10:16:21</publishTime>
+      <publishTime>10/19/2018 14:59:35</publishTime>
     </File>
     <File Include="Content/style/revolution/css/openhand.txt">
       <publishTime>10/19/2018 10:16:21</publishTime>
@@ -3100,19 +3112,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/19/2018 10:16:21</publishTime>
     </File>
     <File Include="Content/style/revolution/revolution-addons/filmstrip/css/revolution.addon.filmstrip.css">
-      <publishTime>10/19/2018 10:16:21</publishTime>
+      <publishTime>10/19/2018 14:59:36</publishTime>
     </File>
     <File Include="Content/style/revolution/revolution-addons/filmstrip/js/revolution.addon.filmstrip.min.js">
       <publishTime>10/19/2018 10:16:21</publishTime>
     </File>
     <File Include="Content/style/revolution/revolution-addons/typewriter/css/typewriter.css">
-      <publishTime>10/19/2018 10:16:21</publishTime>
+      <publishTime>10/19/2018 14:59:37</publishTime>
     </File>
     <File Include="Content/style/revolution/revolution-addons/typewriter/js/revolution.addon.typewriter.min.js">
       <publishTime>10/19/2018 10:16:21</publishTime>
     </File>
     <File Include="Content/style/style.css">
-      <publishTime>10/19/2018 10:18:56</publishTime>
+      <publishTime>10/19/2018 14:59:37</publishTime>
     </File>
     <File Include="Content/style/type/elemis/elemis.eot">
       <publishTime>10/19/2018 10:16:21</publishTime>
@@ -3346,13 +3358,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/19/2018 09:35:04</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
-      <publishTime>10/19/2018 09:35:07</publishTime>
+      <publishTime>10/19/2018 14:59:45</publishTime>
     </File>
     <File Include="Scripts/bootstrap.min.js">
       <publishTime>10/19/2018 09:35:07</publishTime>
     </File>
     <File Include="Scripts/jquery-3.3.1.js">
-      <publishTime>10/19/2018 09:35:08</publishTime>
+      <publishTime>10/19/2018 14:59:47</publishTime>
     </File>
     <File Include="Scripts/jquery-3.3.1.min.js">
       <publishTime>10/19/2018 09:35:08</publishTime>
@@ -3361,7 +3373,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/19/2018 09:35:08</publishTime>
     </File>
     <File Include="Scripts/jquery-3.3.1.slim.js">
-      <publishTime>10/19/2018 09:35:08</publishTime>
+      <publishTime>10/19/2018 14:59:49</publishTime>
     </File>
     <File Include="Scripts/jquery-3.3.1.slim.min.js">
       <publishTime>10/19/2018 09:35:08</publishTime>
@@ -3370,43 +3382,49 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/19/2018 09:35:08</publishTime>
     </File>
     <File Include="Scripts/jquery.validate.js">
-      <publishTime>10/19/2018 09:35:12</publishTime>
+      <publishTime>10/19/2018 14:59:50</publishTime>
     </File>
     <File Include="Scripts/jquery.validate.min.js">
       <publishTime>10/19/2018 09:35:12</publishTime>
     </File>
     <File Include="Scripts/jquery.validate.unobtrusive.js">
-      <publishTime>10/19/2018 09:35:12</publishTime>
+      <publishTime>10/19/2018 14:59:51</publishTime>
     </File>
     <File Include="Scripts/jquery.validate.unobtrusive.min.js">
       <publishTime>10/19/2018 09:35:12</publishTime>
     </File>
     <File Include="Scripts/modernizr-2.8.3.js">
-      <publishTime>10/19/2018 09:35:11</publishTime>
+      <publishTime>10/19/2018 14:59:51</publishTime>
     </File>
     <File Include="Views/Home/About.cshtml">
-      <publishTime>10/19/2018 09:35:04</publishTime>
+      <publishTime>10/19/2018 15:03:31</publishTime>
     </File>
     <File Include="Views/Home/Contact.cshtml">
       <publishTime>10/19/2018 09:35:04</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>10/19/2018 11:52:08</publishTime>
+      <publishTime>10/23/2018 16:07:17</publishTime>
+    </File>
+    <File Include="Views/Photos/Add.cshtml">
+      <publishTime>10/19/2018 15:04:17</publishTime>
+    </File>
+    <File Include="Views/Photos/Index.cshtml">
+      <publishTime>10/19/2018 15:04:26</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
-      <publishTime>10/19/2018 09:35:04</publishTime>
+      <publishTime>10/19/2018 14:59:54</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>10/19/2018 11:15:35</publishTime>
+      <publishTime>10/19/2018 15:03:52</publishTime>
     </File>
     <File Include="Views/Web.config">
-      <publishTime>10/19/2018 09:35:04</publishTime>
+      <publishTime>10/19/2018 14:59:55</publishTime>
     </File>
     <File Include="Views/_ViewStart.cshtml">
-      <publishTime>10/19/2018 09:35:04</publishTime>
+      <publishTime>10/19/2018 14:59:52</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>10/19/2018 11:53:25</publishTime>
+      <publishTime>10/23/2018 17:02:09</publishTime>
     </File>
   </ItemGroup>
 </Project>
