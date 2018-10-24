@@ -34,7 +34,7 @@ namespace Gallery_Photos.Controllers
                     byte[] data = target.ToArray();
                     Models.Picture picture = new Picture();
                     picture.ID = Guid.NewGuid();
-                    picture.images = ImageCompress.Compress(data); 
+                    picture.images = ImageCompress.Compress(data); // 252551
                     picture.name = file.FileName.Replace(".","") + ".jpg";
                     picture.CreateDate = DateTime.Now;
                   var item=   DefaultContext.Pictures.Add(picture);
