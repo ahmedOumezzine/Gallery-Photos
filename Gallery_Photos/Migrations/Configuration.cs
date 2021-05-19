@@ -9,7 +9,7 @@ namespace Gallery_Photos.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(Gallery_Photos.Models.DefaultContext context)
