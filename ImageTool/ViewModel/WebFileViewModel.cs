@@ -1,11 +1,11 @@
-﻿using Gallery_Photos.Models;
+﻿using ImageTool.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Web;
 
-namespace Gallery_Photos.ViewModel
+namespace ImageTool.ViewModel
 {
     public class WebFileViewModel
     {

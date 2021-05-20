@@ -1,5 +1,6 @@
 ﻿using Gallery_Photos.Models;
-using Gallery_Photos.ViewModel;
+using ImageTool.Models;
+using ImageTool.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;

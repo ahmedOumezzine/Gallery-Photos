@@ -1,11 +1,11 @@
-﻿using Gallery_Photos.Models;
+﻿using ImageTool.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace Gallery_Photos.ViewModel
+namespace ImageTool.ViewModel
 {
     public class ImageEditorViewModel
     {
@@ -16,7 +16,7 @@ namespace Gallery_Photos.ViewModel
         [Required]         
         public HttpPostedFileBase FileImage { get; set; }
 
-        internal static Gallery getEnityModel(ImageEditorViewModel model)
+        public static Gallery getEnityModel(ImageEditorViewModel model)
         {
             return new Gallery
             {

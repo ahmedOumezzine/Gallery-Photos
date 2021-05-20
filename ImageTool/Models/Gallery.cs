@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 
 
-namespace Gallery_Photos.Models
+namespace ImageTool.Models
 {
 
     public class Gallery
