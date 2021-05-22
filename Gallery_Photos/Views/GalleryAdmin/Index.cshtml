@@ -4,8 +4,8 @@
 }
 
 <h2>Gallery Admin</h2>
-<div id="ImagePanel" data-url="@Url.Action("Create")">
-    @Html.Action("Create")
+<div id="ImagePanel" data-url="@Url.Action("Create", new { Id = Model })">
+    @Html.Action("Create", new { Id = Model })
 </div>
 <div class="row">
     <div class="col-md-offset-2 col-md-10">
@@ -14,6 +14,6 @@
     </div>
 </div>
 <hr />
-<div id="ListPanel" data-url="@Url.Action("_List")">
-    @Html.Action("_List")
+<div id="ListPanel" data-url="@Url.Action("_List",new { Id = Model })">
+    @Html.Action("_List",new { Id = Model })
 </div>

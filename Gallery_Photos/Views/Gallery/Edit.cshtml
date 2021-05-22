@@ -1,0 +1,42 @@
+﻿@model ImageTool.ViewModel.ImageEditorViewModel
+
+@using (Html.BeginForm("Edit", "Gallery", FormMethod.Post, new { enctype = "multipart/form-data"  }))
+{
+    <div class="form-horizontal">
+        <h4>Add Image Here</h4>
+        @Html.HiddenFor(x=>x.Id)
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Caption, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Caption, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Caption, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-md-2">
+                <label class="pull-right">  Image:</label>
+            </div>
+            <div class="col-md-9">
+                @Html.TextBoxFor(m => m.FileImage, new { type = "file" })
+                <img src="@Url.Action("GetImage", "DownloadFile", new { Area ="" , Id= Model.FileId, t =2 })" />
+                @Html.ValidationMessageFor(model => model.FileImage, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit"  value="Edit" class="btn btn-primary" />
+            </div>
+
+        </div>
+    </div>
+}
+
+
+
+@Scripts.Render("~/bundles/jqueryval")
+ 

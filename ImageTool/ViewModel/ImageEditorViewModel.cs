@@ -1,6 +1,4 @@
 ﻿using ImageTool.Models;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
@@ -10,11 +8,14 @@ namespace ImageTool.ViewModel
     public class ImageEditorViewModel
     {
         public int Id { get; set; }
-        [Required]
+
+        
         public string Caption { get; set; }
 
-        [Required]         
+        [Required]
         public HttpPostedFileBase FileImage { get; set; }
+        public int FileId { get; set; }
+        public string FilePath { get; set; }
 
         public static Gallery getEnityModel(ImageEditorViewModel model)
         {
@@ -22,10 +23,18 @@ namespace ImageTool.ViewModel
             {
                 IsActive = true,
                 Title = model.Caption, 
-                OrderNo = 0,
             };
         }
-
+        public static ImageEditorViewModel getEnity(Gallery model)
+        {
+            return new ImageEditorViewModel
+            {
+                Id = model.Id,
+                Caption = model.Title,
+                FileId = model.Files!=null ? model.Files.Where(x=>x.IsDefault==true).FirstOrDefault().Id:0, 
+                FilePath = model.Files!=null ? model.Files.Where(x => x.IsDefault == true).FirstOrDefault().FilePath:"", 
+            };
+        }
     }
 
     public class ImageList

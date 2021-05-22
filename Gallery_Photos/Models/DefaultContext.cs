@@ -1,6 +1,4 @@
 ﻿using ImageTool.Models;
-using System;
-using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
 
 namespace Gallery_Photos.Models

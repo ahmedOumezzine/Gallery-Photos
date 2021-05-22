@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
@@ -7,10 +6,12 @@ using System.Linq;
 
 namespace ImageTool
 {
-   public class Tool
+    public class Tool
     {
-       public static byte[] getThumbNail(byte[] data, int multi = 1)
+        public static byte[] getThumbNail(string filename, int multi = 1)
         {
+            byte[] data = System.IO.File.ReadAllBytes(filename);
+
             using (var file = new MemoryStream(data))
             {
                 int width = 200 * multi;
@@ -37,6 +38,5 @@ namespace ImageTool
                 };
             };
         }
-
     }
 }

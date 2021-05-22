@@ -29,11 +29,17 @@ namespace Gallery_Photos.Controllers
             {
                 if (t != 0)
                 {
-                    byte[] img =ImageTool.Tool.getThumbNail(model.Data, t);
-                    return File(img, model.ContentType, "thumb_" + model.FileName);
+                    if(model.FilePath==null)
+                        return File("~/images/NoImage.png", "image/png");
+                    else
+                    {
+                        byte[] img = ImageTool.Tool.getThumbNail(Server.MapPath("~/")+"/"+model.FilePath, t);
+                        return File(img, model.ContentType, "thumb_" + model.FileName);
+                    }
+                
                 }
 
-                return File(model.Data, model.ContentType, model.FileName);
+                return File(model.FilePath, model.ContentType, model.FileName);
             }
             else
             {

@@ -1,24 +1,17 @@
-﻿@model Gallery_Photos.ViewModel.ImageEditorViewModel
+﻿@model ImageTool.ViewModel.ImageEditorViewModel
 
 @using (Html.BeginForm("Create", "GalleryAdmin", FormMethod.Post, new { enctype = "multipart/form-data", Id="frmAddImage" }))
 {
     <div class="form-horizontal">
         <h4>Add Image Here</h4>
         <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.Caption, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Caption, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Caption, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" }) 
+        <input type="hidden" name="Id" value="@ViewBag.Id" />
         <div class="form-group">
             <div class="col-md-2">
                 <label class="pull-right">  Image:</label>
             </div>
+
             <div class="col-md-9">
                 @Html.TextBoxFor(m => m.FileImage, new { type = "file" })
                 @Html.ValidationMessageFor(model => model.FileImage, "", new { @class = "text-danger" })
@@ -70,14 +63,14 @@
             }).get();
 
             $.ajax({
-                url: '/GalleryAdmin/Create',
+                url: '/GalleryAdmin/Create/@ViewBag.Id',
                 data: formData,
                 type: "POST",
                 contentType: false,
                 processData: false,
                 success: function (data, textStatus, jqXHR) { 
                     if (data.success == true) {
-                        $("#successmessage").html(data.Caption + " has been added successfully").show().delay(5000).fadeOut();
+                        $("#successmessage").html(data.Caption + " has been added successfully").show().delay(1000).fadeOut();
                         $("#ListPanel").load($("#ListPanel").data("url"));
                         $("#ImagePanel").load($("#ImagePanel").data("url"));
                         return true;

@@ -12,20 +12,21 @@ namespace Gallery_Photos.Controllers
     public class GalleryAdminController : Controller
     {
         // GET: GalleryAdmin
-        public ActionResult Index()
+        public ActionResult Index(int Id)
         {
-            return View();
+            return View(Id);
         }
 
-        public ActionResult Create()
+        public ActionResult Create(int Id)
         {
             ImageEditorViewModel vm = new ImageEditorViewModel();
             ViewBag.Action = "Create";
+            ViewBag.Id = Id;
             return PartialView(vm);
         }
 
         [HttpPost]
-        public ActionResult Create(ImageEditorViewModel model)
+        public ActionResult Create(ImageEditorViewModel model,int Id)
         {
             try
             {
@@ -33,16 +34,13 @@ namespace Gallery_Photos.Controllers
                 {
                     DefaultContext db = new DefaultContext(); 
 
-                    var fileModel = WebFileViewModel.getEntityModel(model.FileImage);
+                    var fileModel = WebFileViewModel.getEntityModel(model.FileImage, Server.MapPath("~/Uploads/"));
+                    fileModel.IsDefault = false;
+                    fileModel.GalleryId = Id;
                     db.WebFiles.Add(fileModel);
                     db.SaveChanges();
 
-                    var entity = ImageEditorViewModel.getEnityModel(model);                  
-                    entity.WebImageId = fileModel.Id;
-                    entity.OrderNo = db.Galleries.Count() > 0 ? db.Galleries.Max(x=> x.OrderNo) + 1 : 1;
-                    db.Galleries.Add(entity);
-                    db.SaveChanges();
-
+                   
                     return Json(new { success = true, Caption = model.Caption });
                 }
 
@@ -54,17 +52,16 @@ namespace Gallery_Photos.Controllers
             }
         }
 
-        public ActionResult _List()
+        public ActionResult _List(int Id)
         {
             DefaultContext db = new DefaultContext();
-            var list = db.Galleries.OrderBy(x => x.OrderNo)
+            var list = db.WebFiles.Where(x=>x.GalleryId==Id && x.IsDefault==false).OrderBy(x => x.CreatedDate)
                         .Select(x => new ImageList
                         {
                             Id = x.Id,
                             IsActive = x.IsActive,
-                            OrderNo = x.OrderNo,
-                            WebImageId = x.WebImageId,
-                            Title = x.Title
+                            WebImageId = x.Id,
+                            Title = x.FileName
                         }).ToList();
 
             return PartialView(list);
