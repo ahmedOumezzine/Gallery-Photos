@@ -1,0 +1,187 @@
+﻿<script>
+
+    function doInitDragImageTool(files, param, handler )
+    {
+        var $image_crop = null;
+        $( '#image_demo' ).croppie( 'destroy' );
+        $image_crop = $( '#image_demo' ).croppie( {
+            showZoomer: true,
+            enableResize: true,
+            enableOrientation: true,
+            mouseWheelZoom: true,
+            enableExif: true,
+            viewport: param.viewport,
+            boundary: param.boundary
+        } );
+
+        var reader = new FileReader();
+        reader.onload = function ( event )
+        {
+            $image_crop.croppie( 'bind', {
+                url: event.target.result,
+            } ).then( function ()
+            {
+                $image_crop.croppie( 'setZoom', 1.5 );
+            } );
+        };
+        reader.readAsDataURL( files[0] );
+        $( "#crop_image" ).unbind();
+        $( '#crop_image' ).click( function ( e )
+        {
+            $image_crop.croppie( 'result', {
+                type: 'base64',
+                size: param.viewport,
+                format: 'jpeg',
+            } ).then( function ( response )
+            {
+                if ( response )
+                {
+
+                    $(handler).find('img').attr('src',response );
+                    $(handler).find("input[name*='name']").val( input.name );
+                    $(handler).find("input[name*='binary']").val(response );
+
+                }
+            } );
+            $( '#uploadimageModal' ).modal( 'hide' );
+        } );
+        $( ".RotateLeft" ).unbind();
+        $( '.RotateLeft' ).click( function ( e )
+        {
+            $image_crop.croppie( 'rotate', -90 );
+        } );
+
+        $( ".RotateRight" ).unbind();
+        $( '.RotateRight' ).click( function ( e )
+        {
+            $image_crop.croppie( 'rotate', 90 );
+        } );
+
+        $( '#uploadimageModal' ).modal( 'show' );
+ 
+
+    }
+    function doInitImageTool( input, param, handler )
+    {
+        var $image_crop = null;
+        $( '#image_demo' ).croppie( 'destroy' );
+        $image_crop = $( '#image_demo' ).croppie( {
+            showZoomer: true,
+            enableResize: true,
+            enableOrientation: true,
+            mouseWheelZoom: true,
+            enableExif: true,
+            viewport: param.viewport,
+            boundary: param.boundary
+        } );
+
+        var reader = new FileReader();
+        reader.onload = function ( event )
+        {
+            $image_crop.croppie( 'bind', {
+                url: event.target.result,
+            } ).then( function ()
+            {
+                $image_crop.croppie( 'setZoom', 1.5 );
+            } );
+        };
+        reader.readAsDataURL( input.files[0] );
+        $( "#crop_image" ).unbind();
+        $( '#crop_image' ).click( function ( e )
+        {
+            $image_crop.croppie( 'result', {
+                type: 'base64',
+                size: param.viewport,
+                format: 'jpeg',
+            } ).then( function ( response )
+            {
+                if ( response )
+                {
+
+                    $(handler).find('img').attr('src',response );
+                    $(handler).find("input[name*='name']").val( input.name );
+                    $(handler).find("input[name*='binary']").val(response );
+
+                }
+            } );
+            $( '#uploadimageModal' ).modal( 'hide' );
+        } );
+        $( ".RotateLeft" ).unbind();
+        $( '.RotateLeft' ).click( function ( e )
+        {
+            $image_crop.croppie( 'rotate', -90 );
+        } );
+
+        $( ".RotateRight" ).unbind();
+        $( '.RotateRight' ).click( function ( e )
+        {
+            $image_crop.croppie( 'rotate', 90 );
+        } );
+
+        $( '#uploadimageModal' ).modal( 'show' );
+        input.value = '';
+
+    }
+
+    $( '.showpicture' ).click( function ( e )
+    {
+        var _binary=$(this).closest('div.mt-card-item').find('img')[0].src;
+        var name=  $(this).find("input[name='name']").val;
+        if (name) {
+            $("#img-responsive").attr("src",_binary);
+        } else {
+            $("#img-responsive").attr("src", "https://cdn.dribbble.com/users/122051/screenshots/5749053/dribbble_1.gif");
+        }
+            $('#myModal').modal('show');
+
+    } );
+    $( '.removepicture' ).click( function ( e )
+    {
+        $(this).closest('div.mt-card-item').find('img')[0].src ="https://cdn.dribbble.com/users/34020/screenshots/3993396/otp_icon_upload.gif";
+          $(this).closest('div.mt-card-item').find("input[name='name']").val("");
+        $(this).closest('div.mt-card-item').find("input[name='binary']").val("" );
+
+    } );
+
+
+</script>
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog  modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img class="img-responsive" id="img-responsive" src="" style=" margin: 20px auto; " />
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="uploadimageModal" class="modal" role="dialog">
+    <div class="modal-dialog  modal-lg" style="width: auto;max-width: 100%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">  Upload &amp; Crop Image </h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div id="image_demo" style=" height: auto;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success RotateLeft">
+                    Rotate left
+                </button>
+                <button class="btn btn-success RotateRight">
+                    Rotate right
+                </button>
+                <button class="btn btn-success crop_image" id="crop_image">
+                    Crop &amp; Upload Image
+                </button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">  Close</button>
+            </div>
+        </div>
+    </div>
+</div>
