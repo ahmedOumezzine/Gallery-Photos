@@ -117,7 +117,7 @@ namespace Gallery_Photos.Controllers
         public ActionResult Delete(int Id)
         {
             DefaultContext db = new DefaultContext();
-            var Item = db.Galleries.Include("File").Where(x => x.Id == Id).FirstOrDefault();
+            var Item = db.Galleries.Include("Files").Where(x => x.Id == Id).FirstOrDefault();
             if (Item != null)
             {
                 if (Item.Files != null)
@@ -125,9 +125,10 @@ namespace Gallery_Photos.Controllers
                     foreach(var File in Item.Files)
                     {
                         System.IO.File.Delete(Server.MapPath("/") + "/" + File.FilePath);
-                        db.Entry(File).State = System.Data.Entity.EntityState.Deleted;
                     }
-      
+                    db.WebFiles.RemoveRange(Item.Files);
+
+
                 }
                 db.Entry(Item).State = System.Data.Entity.EntityState.Deleted;
                 db.SaveChanges();

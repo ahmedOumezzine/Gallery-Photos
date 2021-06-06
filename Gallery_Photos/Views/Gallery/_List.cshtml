@@ -4,18 +4,18 @@
 
         <h2>Albums</h2>
 
-        <div class="albumlist pic"> 
+        <div class="albumlist pic" style=" display: flex; "> 
             @foreach (var item in Model)
             {
-            <div>
+            <div style=" margin-left: 5px; margin-right: 5px; ">
                 <a href="@Url.Action("Index","GalleryAdmin",new {Id=item.Id })" data-text="@item.Title (50)">
                     <img width="190" height="126" alt="Winter (1)" src="@Url.Action("GetImage", "DownloadFile", new { Area ="" , Id= item.WebImageId, t =2 })">
-                </a> 
-                <p>@item.Title 
-                <a href="@Url.Action("edit",new{ Id=item.Id })">edit</a>
-                <a href="@Url.Action("Delete",new{ Id=item.Id })" onclick="$.post(this.href); return false;">Delete</a>
-
-                </p>
+                </a>
+                <p>  @item.Title  </p>
+                <div style="float:right">
+                    <a href="@Url.Action("edit",new{ Id=item.Id })"><i class="fas fa-edit"></i></a>
+                    <a href="@Url.Action("Delete",new{ Id=item.Id })" onclick="$.post(this.href); return false;"><i class="fas fa-trash"></i></a>
+                </div>
             </div>
           
             }

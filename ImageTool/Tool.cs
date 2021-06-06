@@ -10,7 +10,11 @@ namespace ImageTool
     {
         public static byte[] getThumbNail(string filename, int multi = 1)
         {
-            byte[] data = System.IO.File.ReadAllBytes(filename);
+            if (!File.Exists(filename))
+            {
+                return null;
+            }
+                byte[] data = System.IO.File.ReadAllBytes(filename);
 
             using (var file = new MemoryStream(data))
             {

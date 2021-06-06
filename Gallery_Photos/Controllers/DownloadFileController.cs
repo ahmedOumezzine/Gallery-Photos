@@ -34,6 +34,9 @@ namespace Gallery_Photos.Controllers
                     else
                     {
                         byte[] img = ImageTool.Tool.getThumbNail(Server.MapPath("~/")+"/"+model.FilePath, t);
+                        if (img == null)
+                            return File("~/images/NoImage.png", "image/png");
+                        else
                         return File(img, model.ContentType, "thumb_" + model.FileName);
                     }
                 
